@@ -245,22 +245,22 @@ jobs:
               run: |
                   echo "## 📊 True Lies Test Report Summary" >> $GITHUB_STEP_SUMMARY
                   echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "✅ Tests ejecutados correctamente" >> $GITHUB_STEP_SUMMARY
+                  echo "✅ Tests executed successfully" >> $GITHUB_STEP_SUMMARY
                   echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "### 📄 Reportes generados:" >> $GITHUB_STEP_SUMMARY
+                  echo "### 📄 Generated Reports:" >> $GITHUB_STEP_SUMMARY
                   ls -1 reports/*.html 2>/dev/null | grep -v "index.html" | while read file; do
                     filename=$(basename "$file")
                     echo "- $filename" >> $GITHUB_STEP_SUMMARY
                   done
                   echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "🔗 **Ver reportes:** https://thefreerangetester.github.io/demo_truelies/" >> $GITHUB_STEP_SUMMARY
+                  echo "🔗 **View Reports:** https://thefreerangetester.github.io/demo_truelies/" >> $GITHUB_STEP_SUMMARY
                   echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "_Los reportes incluyen gráficos de tendencias históricas_" >> $GITHUB_STEP_SUMMARY
+                  echo "_Reports include historical trend charts_" >> $GITHUB_STEP_SUMMARY
                   echo "" >> $GITHUB_STEP_SUMMARY
 
-                  # Si existe el historial, mostrar un resumen
+                  # Show summary if history exists
                   if [ -f true_lies_reporting/validation_history.json ]; then
-                    echo "### 📈 Historial de validaciones:" >> $GITHUB_STEP_SUMMARY
+                    echo "### 📈 Validation History:" >> $GITHUB_STEP_SUMMARY
                     python3 << 'PYTHON'
                   import json
                   import os
@@ -273,13 +273,13 @@ jobs:
                       if executions:
                           latest = executions[-1]
                           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
-                              f.write(f"- **Escenario:** {latest['scenario_name']}\n")
-                              f.write(f"- **Candidatos evaluados:** {latest['total_candidates']}\n")
-                              f.write(f"- **Aprobados:** {latest['passed']} ✅\n")
-                              f.write(f"- **Fallidos:** {latest['failed']} ❌\n")
-                              f.write(f"- **Tasa de éxito:** {latest['pass_rate']:.1f}%\n")
-                              f.write(f"- **Promedio similitud:** {latest['avg_similarity_score']:.2%}\n")
-                              f.write(f"- **Promedio exactitud factual:** {latest['avg_factual_accuracy']:.1f}%\n")
+                              f.write(f"- **Scenario:** {latest['scenario_name']}\n")
+                              f.write(f"- **Candidates Evaluated:** {latest['total_candidates']}\n")
+                              f.write(f"- **Passed:** {latest['passed']} ✅\n")
+                              f.write(f"- **Failed:** {latest['failed']} ❌\n")
+                              f.write(f"- **Pass Rate:** {latest['pass_rate']:.1f}%\n")
+                              f.write(f"- **Average Similarity:** {latest['avg_similarity_score']:.2%}\n")
+                              f.write(f"- **Average Factual Accuracy:** {latest['avg_factual_accuracy']:.1f}%\n")
                   except Exception as e:
                       print(f"Error reading history: {e}")
                   PYTHON
@@ -298,27 +298,27 @@ jobs:
                         const latest = history.executions[history.executions.length - 1];
                         
                         historyData = `
-                      ### 📈 Resultados del último test:
-                      - **Escenario:** ${latest.scenario_name}
-                      - **Candidatos evaluados:** ${latest.total_candidates}
-                      - **Aprobados:** ${latest.passed} ✅
-                      - **Fallidos:** ${latest.failed} ❌
-                      - **Tasa de éxito:** ${latest.pass_rate.toFixed(1)}%
-                      - **Promedio similitud:** ${(latest.avg_similarity_score * 100).toFixed(1)}%
-                      - **Promedio exactitud factual:** ${latest.avg_factual_accuracy.toFixed(1)}%
+                      ### 📈 Latest Test Results:
+                      - **Scenario:** ${latest.scenario_name}
+                      - **Candidates Evaluated:** ${latest.total_candidates}
+                      - **Passed:** ${latest.passed} ✅
+                      - **Failed:** ${latest.failed} ❌
+                      - **Pass Rate:** ${latest.pass_rate.toFixed(1)}%
+                      - **Average Similarity:** ${(latest.avg_similarity_score * 100).toFixed(1)}%
+                      - **Average Factual Accuracy:** ${latest.avg_factual_accuracy.toFixed(1)}%
                         `;
                       } catch (e) {
-                        console.log('No se pudo leer el historial');
+                        console.log('Could not read validation history');
                       }
 
                       const body = `## 🎭 True Lies Test Reports
 
-                      ✅ Los tests se han ejecutado correctamente.
+                      ✅ Tests executed successfully.
                       ${historyData}
 
-                      🌐 **Ver reportes en vivo:** https://thefreerangetester.github.io/demo_truelies/
+                      🌐 **View Reports:** https://thefreerangetester.github.io/demo_truelies/
 
-                      Los reportes se actualizan automáticamente después del merge a main e incluyen gráficos de tendencias históricas.
+                      Reports are updated automatically after merging to main and include historical trend charts.
                       `;
 
                       github.rest.issues.createComment({
