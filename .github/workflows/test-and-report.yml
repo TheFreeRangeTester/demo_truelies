@@ -50,8 +50,8 @@ jobs:
               run: |
                   mkdir -p reports
 
-                  # Copiar todos los reportes HTML generados
-                  find . -maxdepth 2 -name "*.html" -type f -exec cp {} reports/ \;
+                  # Copiar solo los reportes HTML de true_lies_reporting
+                  cp true_lies_reporting/*.html reports/ 2>/dev/null || echo "No HTML files found in true_lies_reporting"
 
                   # Copiar el historial de validación
                   if [ -f true_lies_reporting/validation_history.json ]; then
@@ -232,6 +232,7 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./reports
                   keep_files: false
+                  force_orphan: true
 
             - name: Save validation history to cache
               if: always()
