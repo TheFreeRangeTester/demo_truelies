@@ -47,7 +47,7 @@ validation_result = validate_llm_candidates(
     scenario=scenario,
     candidates=candidates,
     threshold=0.5,
-    generate_html_report=True,  # ← ¡Esto genera el reporte automáticamente!
+    generate_html_report=False,  # ← ¡Esto genera el reporte automáticamente!
     html_output_file="performance_semana_1.html",  # ← Nombre personalizado
     html_title="Mis Tests de Validación"  # ← Título personalizado
 )
