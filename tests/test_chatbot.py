@@ -1,3 +1,4 @@
+import json
 from true_lies import validate_llm_candidates
 
 # Facts that MUST be in the response
@@ -26,21 +27,10 @@ scenario = {
     "facts": facts
 }
 
-# Validate responses
-candidates = [
-    "Policy POL-2024-001 does not cover your automobile with monthly payments of $850",
-    "Your car insurance policy POL-2024-001 costs $850 monthly",
-    "Your auto insurance policy POL-2024-001 provides coverage up to $850.",
-    "I can confirm that policy POL-2024-001 for your vehicle is active with $850 in coverage.",
-    "Great news! Your car insurance policy POL-2024-001 remains valid and offers $850 in protection.",
-    "Policy POL-2024-001 is an auto insurance plan with a coverage amount of $850.",
-    "Just a reminder: your auto policy POL-2024-001 currently covers you for $850.",
-    "Auto coverage details: Policy POL-2024-001, insured amount $850.",
-    "Your vehicle is insured under policy POL-2024-001, which includes $850 of coverage.",
-    "I've verified that your auto policy POL-2024-001 offers $850 in benefits.",
-    "Everything is set—your auto insurance, policy POL-2024-001, protects you up to $850.",
-    "Summary: Auto insurance policy POL-2024-001 with a coverage limit of $850 is active and in good standing."
-]
+# Load candidates from JSON file
+with open('tests/data/chatbot_candidates.json', 'r') as f:
+    data = json.load(f)
+    candidates = data['candidates']
 
 validation_result = validate_llm_candidates(
     scenario=scenario,

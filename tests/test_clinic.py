@@ -1,3 +1,4 @@
+import json
 from true_lies import validate_llm_candidates
 
 facts = {
@@ -53,23 +54,10 @@ scenario = {
     "facts": facts
 }
 
-candidates = [
-"Let me help you, Sophia Lopez! Your next appointment is with Dr. Sarah Green, specialist in Ophthalmology, on 2025-10-09 at 4:30 PM at Southview Medical.",
-"Hi Sophia! You’re scheduled to see Dr. Sarah Green for Ophthalmology on October 9th, 2025 at 4:30 PM in Southview Medical Clinic.",
-"Sophia Lopez, your upcoming Ophthalmology appointment with Dr. Sarah Green is set for 4:30 PM on October 9, 2025 at Southview Medical.",
-"Sure thing, Sophia! You’ll be meeting Dr. Sarah Green from Ophthalmology on the 9th of October at 4:30 PM at our Southview Medical branch.",
-"Certainly, Ms. Lopez. Your next Ophthalmology appointment with Dr. Sarah Green is on October 9, 2025 at 4:30 PM at Southview Medical.",
-"Let me help you, Sophia Lopez! Your next appointment with Dr. Sarah Green in Ophthalmology is on 2025-10-09 at 4:30 PM.",
-"Let me help you, Sophia Lopez! Your next appointment with Dr. Sarah Green is on 2025-10-09 at 3:30 PM at Southview Medical.",
-"Let me help you, Sophia Lopez! Your next appointment with Dr. Sarah Green is on 2025-10-10 at 4:30 PM at Southview Medical.",
-"Let me help you, Sophia Lopez! Your next appointment is with Dr. Emily Smith from Ophthalmology on 2025-10-09 at 4:30 PM at Southview Medical.",
-"Let me help you, Sophia Lopez! Your next appointment is with Dr. Sarah Green, specialist in Cardiology, on 2025-10-09 at 4:30 PM at Southview Medical.",
-"Let me help you, Sophia Lopez! Your next appointment is with Dr. Sarah Green on 2025-10-09 at 4:30 PM at Downtown Clinic.",
-"Sophia, your next appointment is on 2025-10-09 at 4:30 PM at Southview Medical.",
-"Hey Sophia! You’re booked with Dr. Sarah Green (Ophthalmology) on October 9th at 4:30 PM — Southview Medical.",
-"Let me check that for you, Sophia Lopez. According to our system, your next medical visit is scheduled with Dr. Sarah Green, Ophthalmology specialist, on Thursday, October 9th 2025 at 4:30 PM, Southview Medical Center.",
-"Let me help you, Sophia Lopez! Your next appointment at 4:30 PM on 2025-10-09 is with Dr. Sarah Green, Ophthalmology specialist, located in Southview Medical.",
-]
+# Load candidates from JSON file
+with open('tests/data/clinic_candidates.json', 'r') as f:
+    data = json.load(f)
+    candidates = data['candidates']
 
 validation_result = validate_llm_candidates(
     scenario=scenario,
@@ -77,5 +65,5 @@ validation_result = validate_llm_candidates(
     threshold=0.5,
     generate_html_report=True,
     html_output_file="true_lies_reporting/clinic_semana_1.html",
-    html_title="Clinic Tests - Week 1"
+    html_title="Clinic Tests"
 )
