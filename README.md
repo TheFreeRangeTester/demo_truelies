@@ -1,35 +1,35 @@
 # Chatbot Test Project 🤖
 
-Un proyecto de chatbot desarrollado en Python con capacidades de procesamiento de lenguaje natural y validación automatizada de respuestas usando **True Lies Validator**.
+A Python chatbot project with natural language processing capabilities and automated response validation using **True Lies Validator**.
 
-## 🚀 Configuración Inicial
+## 🚀 Initial Setup
 
-### 1. Crear y activar entorno virtual
+### 1. Create and activate virtual environment
 
 ```bash
-# Crear entorno virtual
+# Create virtual environment
 python3 -m venv venv
 
-# Activar entorno virtual
-source venv/bin/activate  # En macOS/Linux
-# o
-venv\Scripts\activate     # En Windows
+# Activate virtual environment
+source venv/bin/activate  # On macOS/Linux
+# or
+venv\Scripts\activate     # On Windows
 ```
 
-### 2. Instalar dependencias
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configurar variables de entorno
+### 3. Configure environment variables
 
 ```bash
 cp .env.example .env
-# Editar .env con tus configuraciones
+# Edit .env with your configurations
 ```
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 chatbot-test/
@@ -37,106 +37,106 @@ chatbot-test/
 │   └── workflows/          # GitHub Actions workflows
 │       ├── test-and-report.yml
 │       └── README.md
-├── venv/                   # Entorno virtual
-├── tests/                  # Tests con True Lies
+├── venv/                   # Virtual environment
+├── tests/                  # True Lies tests
 │   ├── test_chatbot.py
 │   └── test_clinic.py
-├── true_lies_reporting/    # Reportes y datos históricos
+├── true_lies_reporting/    # Reports and historical data
 │   └── validation_history.json
-├── *.html                  # Reportes HTML generados
-├── requirements.txt        # Dependencias
-├── .gitignore             # Archivos a ignorar
-└── README.md              # Este archivo
+├── *.html                  # Generated HTML reports
+├── requirements.txt        # Dependencies
+├── .gitignore             # Files to ignore
+└── README.md              # This file
 ```
 
-## 🛠️ Desarrollo
+## 🛠️ Development
 
-### Ejecutar tests localmente
+### Run tests locally
 
 ```bash
-# Ejecutar todos los tests
+# Run all tests
 pytest tests/ -v
 
-# Ejecutar un test específico
+# Run a specific test
 pytest tests/test_clinic.py -v
 ```
 
-Los tests generarán reportes HTML automáticamente en el directorio raíz y en `true_lies_reporting/`.
+Tests will automatically generate HTML reports in the root directory and in `true_lies_reporting/`.
 
-### 🎭 Validación con True Lies
+### 🎭 Validation with True Lies
 
-Este proyecto usa **True Lies Validator** para validar las respuestas del chatbot. Los tests evalúan:
+This project uses **True Lies Validator** to validate chatbot responses. Tests evaluate:
 
-- ✅ **Similitud semántica**: ¿La respuesta transmite el mismo significado?
-- ✅ **Exactitud factual**: ¿Los datos extraídos son correctos?
-- ✅ **Análisis de polaridad**: ¿El tono es apropiado?
+- ✅ **Semantic similarity**: Does the response convey the same meaning?
+- ✅ **Factual accuracy**: Are the extracted data points correct?
+- ✅ **Polarity analysis**: Is the tone appropriate?
 
-#### Ver reportes localmente
+#### View reports locally
 
-Después de ejecutar los tests, abre cualquier archivo `.html` en tu navegador:
+After running tests, open any `.html` file in your browser:
 
 ```bash
-# En macOS
+# On macOS
 open clinic_semana_1.html
 
-# En Linux
+# On Linux
 xdg-open clinic_semana_1.html
 
-# En Windows
+# On Windows
 start clinic_semana_1.html
 ```
 
-### 📊 GitHub Actions - Integración Continua
+### 📊 GitHub Actions - Continuous Integration
 
-El proyecto incluye un workflow de GitHub Actions que:
+The project includes a GitHub Actions workflow that:
 
-1. ✅ Ejecuta automáticamente los tests en cada push/PR
-2. 📊 Genera reportes HTML con True Lies
-3. 📈 Preserva el historial de validaciones para trends
-4. 🌐 Publica los reportes en GitHub Pages
-5. 💬 Comenta en PRs con resumen de resultados
+1. ✅ Automatically runs tests on every push/PR
+2. 📊 Generates HTML reports with True Lies
+3. 📈 Preserves validation history for trends
+4. 🌐 Publishes reports to GitHub Pages
+5. 💬 Comments on PRs with result summaries
 
-#### Ver reportes en GitHub Pages
+#### View reports on GitHub Pages
 
-Los reportes están publicados en: **https://thefreerangetester.github.io/demo_truelies/**
+Reports are published at: **https://thefreerangetester.github.io/demo_truelies/**
 
-- Acceso directo desde el navegador
-- Se actualizan automáticamente con cada push a main
-- Incluyen gráficos de tendencias históricas
-- Sin necesidad de descargar archivos
+- Direct browser access
+- Automatically updated with every push to main
+- Includes historical trend charts
+- No need to download files
 
-📖 Para más detalles, consulta [`.github/workflows/README.md`](.github/workflows/README.md)
+📖 For more details, see [`.github/workflows/README.md`](.github/workflows/README.md)
 
-### Formatear código
+### Format code
 
 ```bash
 black tests/
 ```
 
-### Verificar estilo de código
+### Check code style
 
 ```bash
 flake8 tests/
 ```
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 
-- **Python 3.13** - Lenguaje de programación
-- **True Lies Validator** - Validación de respuestas LLM
-- **pytest** - Framework de testing
-- **GitHub Actions** - Integración continua y reportes automatizados
+- **Python 3.13** - Programming language
+- **True Lies Validator** - LLM response validation
+- **pytest** - Testing framework
+- **GitHub Actions** - Continuous integration and automated reporting
 
-## 📝 Notas
+## 📝 Notes
 
-- Este proyecto usa True Lies para validación automática de respuestas de chatbot
-- Los reportes HTML incluyen métricas detalladas y visualizaciones interactivas
-- El historial de validaciones permite tracking de métricas a lo largo del tiempo
-- GitHub Actions ejecuta los tests automáticamente y preserva el historial
+- This project uses True Lies for automated chatbot response validation
+- HTML reports include detailed metrics and interactive visualizations
+- Validation history enables metric tracking over time
+- GitHub Actions runs tests automatically and preserves history
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
