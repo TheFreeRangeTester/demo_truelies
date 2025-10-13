@@ -1,339 +1,332 @@
 name: Test and Report with True Lies
 
 on:
-    push:
-        branches: [main, master, develop]
-    pull_request:
-        branches: [main, master, develop]
-    workflow_dispatch:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+  workflow_dispatch:
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        permissions:
-            contents: write
-            pages: write
-            id-token: write
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
 
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-            - name: Set up Python
-              uses: actions/setup-python@v5
-              with:
-                  python-version: "3.13"
-                  cache: "pip"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
 
-            - name: Install dependencies
-              run: |
-                  python -m pip install --upgrade pip
-                  pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-            - name: Create reporting directory
-              run: |
-                  mkdir -p true_lies_reporting
+      - name: Create reporting directory
+        run: |
+          mkdir -p true_lies_reporting
 
-            - name: Restore validation history
-              uses: actions/cache@v4
-              with:
-                  path: true_lies_reporting/validation_history.json
-                  key: validation-history-${{ github.sha }}
-                  restore-keys: |
-                      validation-history-
+      - name: Restore validation history
+        uses: actions/cache@v4
+        with:
+          path: true_lies_reporting/validation_history.json
+          key: validation-history-${{ github.sha }}
+          restore-keys: |
+            validation-history-
 
-            - name: Run tests
-              run: |
-                  python tests/test_clinic.py
-                  python tests/test_chatbot.py
-              continue-on-error: true
+      - name: Run tests
+        run: |
+          python tests/test_clinic.py
+          python tests/test_chatbot.py
+        continue-on-error: true
 
-            - name: Prepare reports
-              if: always()
-              run: |
-                  mkdir -p reports
+      - name: Prepare reports
+        if: always()
+        run: |
+          mkdir -p reports
 
-                  # Copiar solo los reportes HTML de true_lies_reporting
-                  cp true_lies_reporting/*.html reports/ 2>/dev/null || echo "No HTML files found in true_lies_reporting"
+          # Copiar solo los reportes HTML de true_lies_reporting
+          cp true_lies_reporting/*.html reports/ 2>/dev/null || echo "No HTML files found in true_lies_reporting"
 
-                  # Copiar el historial de validación
-                  if [ -f true_lies_reporting/validation_history.json ]; then
-                    cp true_lies_reporting/validation_history.json reports/
-                  fi
+          # Copiar el historial de validación
+          if [ -f true_lies_reporting/validation_history.json ]; then
+            cp true_lies_reporting/validation_history.json reports/
+          fi
 
-                  # Create index page
-                  cat > reports/index.html << 'EOF'
-                  <!DOCTYPE html>
-                  <html lang="en">
-                  <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>True Lies Test Reports</title>
-                    <style>
-                      * {
-                        margin: 0;
-                        padding: 0;
-                        box-sizing: border-box;
-                      }
-                      body {
-                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        min-height: 100vh;
-                        padding: 40px 20px;
-                      }
-                      .container {
-                        max-width: 1000px;
-                        margin: 0 auto;
-                      }
-                      .header {
-                        text-align: center;
-                        color: white;
-                        margin-bottom: 40px;
-                      }
-                      .header h1 {
-                        font-size: 48px;
-                        margin-bottom: 10px;
-                        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-                      }
-                      .header p {
-                        font-size: 18px;
-                        opacity: 0.9;
-                      }
-                      .card {
-                        background: white;
-                        border-radius: 12px;
-                        padding: 30px;
-                        margin-bottom: 20px;
-                        box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-                      }
-                      .card h2 {
-                        color: #333;
-                        margin-bottom: 20px;
-                        font-size: 24px;
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                      }
-                      .report-list {
-                        list-style: none;
-                      }
-                      .report-item {
-                        padding: 16px;
-                        border-bottom: 1px solid #f0f0f0;
-                        transition: all 0.3s ease;
-                      }
-                      .report-item:last-child {
-                        border-bottom: none;
-                      }
-                      .report-item:hover {
-                        background: #f8f9ff;
-                        padding-left: 24px;
-                      }
-                      .report-item a {
-                        color: #667eea;
-                        text-decoration: none;
-                        font-size: 18px;
-                        font-weight: 500;
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                      }
-                      .report-item a:hover {
-                        color: #764ba2;
-                      }
-                      .icon {
-                        font-size: 24px;
-                      }
-                      .timestamp {
-                        color: #666;
-                        font-size: 14px;
-                        margin-top: 8px;
-                        margin-left: 34px;
-                      }
-                      .info-box {
-                        background: #f8f9ff;
-                        border-left: 4px solid #667eea;
-                        padding: 16px;
-                        border-radius: 4px;
-                        margin-top: 20px;
-                      }
-                      .info-box p {
-                        color: #555;
-                        line-height: 1.6;
-                      }
-                      .info-box a {
-                        color: #667eea;
-                        text-decoration: none;
-                        font-weight: 600;
-                      }
-                      .info-box a:hover {
-                        text-decoration: underline;
-                      }
-                      .footer {
-                        text-align: center;
-                        color: white;
-                        margin-top: 40px;
-                        opacity: 0.8;
-                        font-size: 14px;
-                      }
-                    </style>
-                  </head>
-                  <body>
-                    <div class="container">
-                      <div class="header">
-                        <h1>🎭 True Lies Reports</h1>
-                        <p>Automated LLM Response Validation</p>
-                      </div>
-                      
-                      <div class="card">
-                        <h2><span class="icon">📊</span> Available Reports</h2>
-                        <ul class="report-list">
-                  EOF
+          # Create index page
+          cat > reports/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>True Lies Test Reports</title>
+            <style>
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                padding: 40px 20px;
+              }
+              .container {
+                max-width: 1000px;
+                margin: 0 auto;
+              }
+              .header {
+                text-align: center;
+                color: white;
+                margin-bottom: 40px;
+              }
+              .header h1 {
+                font-size: 48px;
+                margin-bottom: 10px;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+              }
+              .header p {
+                font-size: 18px;
+                opacity: 0.9;
+              }
+              .card {
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                margin-bottom: 20px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+              }
+              .card h2 {
+                color: #333;
+                margin-bottom: 20px;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+              .report-list {
+                list-style: none;
+              }
+              .report-item {
+                padding: 16px;
+                border-bottom: 1px solid #f0f0f0;
+                transition: all 0.3s ease;
+              }
+              .report-item:last-child {
+                border-bottom: none;
+              }
+              .report-item:hover {
+                background: #f8f9ff;
+                padding-left: 24px;
+              }
+              .report-item a {
+                color: #667eea;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+              .report-item a:hover {
+                color: #764ba2;
+              }
+              .icon {
+                font-size: 24px;
+              }
+              .timestamp {
+                color: #666;
+                font-size: 14px;
+                margin-top: 8px;
+                margin-left: 34px;
+              }
+              .info-box {
+                background: #f8f9ff;
+                border-left: 4px solid #667eea;
+                padding: 16px;
+                border-radius: 4px;
+                margin-top: 20px;
+              }
+              .info-box p {
+                color: #555;
+                line-height: 1.6;
+              }
+              .info-box a {
+                color: #667eea;
+                text-decoration: none;
+                font-weight: 600;
+              }
+              .info-box a:hover {
+                text-decoration: underline;
+              }
+              .footer {
+                text-align: center;
+                color: white;
+                margin-top: 40px;
+                opacity: 0.8;
+                font-size: 14px;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <div class="header">
+                <h1>🎭 True Lies Reports</h1>
+                <p>Automated LLM Response Validation</p>
+              </div>
+              
+              <div class="card">
+                <h2><span class="icon">📊</span> Available Reports</h2>
+                <ul class="report-list">
+          EOF
 
-                  # Add links to all HTML reports (except index.html)
-                  ls -1 reports/*.html 2>/dev/null | grep -v "index.html" | while read file; do
-                    filename=$(basename "$file")
-                    echo "                <li class='report-item'>" >> reports/index.html
-                    echo "                  <a href='$filename'><span class='icon'>📄</span> $filename</a>" >> reports/index.html
-                    echo "                  <div class='timestamp'>⏰ Generated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')</div>" >> reports/index.html
-                    echo "                </li>" >> reports/index.html
-                  done
+          # Add links to all HTML reports (except index.html)
+          ls -1 reports/*.html 2>/dev/null | grep -v "index.html" | while read file; do
+            filename=$(basename "$file")
+            echo "                <li class='report-item'>" >> reports/index.html
+            echo "                  <a href='$filename'><span class='icon'>📄</span> $filename</a>" >> reports/index.html
+            echo "                  <div class='timestamp'>⏰ Generated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')</div>" >> reports/index.html
+            echo "                </li>" >> reports/index.html
+          done
 
-                  cat >> reports/index.html << 'EOF'
-                        </ul>
-                        
-                        <div class="info-box">
-                          <p><strong>📈 Validation History:</strong></p>
-                          <p>Historical data for trends is available in <a href="validation_history.json">validation_history.json</a></p>
-                        </div>
-                      </div>
-                      
-                      <div class="card">
-                        <h2><span class="icon">ℹ️</span> Information</h2>
-                        <p style="color: #555; line-height: 1.8;">
-                          These reports were automatically generated by <strong>True Lies Validator</strong> 
-                          during test execution in GitHub Actions. Reports include metrics for 
-                          semantic similarity, factual accuracy, and polarity analysis for each evaluated candidate.
-                        </p>
-                      </div>
-                      
-                      <div class="footer">
-                        <p>Powered by True Lies Validator • GitHub Actions</p>
-                      </div>
-                    </div>
-                  </body>
-                  </html>
-                  EOF
+          cat >> reports/index.html << 'EOF'
+                </ul>
+                
+                <div class="info-box">
+                  <p><strong>📈 Validation History:</strong></p>
+                  <p>Historical data for trends is available in <a href="validation_history.json">validation_history.json</a></p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <h2><span class="icon">ℹ️</span> Information</h2>
+                <p style="color: #555; line-height: 1.8;">
+                  These reports were automatically generated by <strong>True Lies Validator</strong> 
+                  during test execution in GitHub Actions. Reports include metrics for 
+                  semantic similarity, factual accuracy, and polarity analysis for each evaluated candidate.
+                </p>
+              </div>
+              
+              <div class="footer">
+                <p>Powered by True Lies Validator • GitHub Actions</p>
+              </div>
+            </div>
+          </body>
+          </html>
+          EOF
 
-                  echo "📋 Reportes preparados:"
-                  ls -la reports/
+          echo "📋 Reportes preparados:"
+          ls -la reports/
 
-            - name: Setup Pages
-              if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-              uses: actions/configure-pages@v4
+      - name: Setup Pages
+        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        uses: actions/configure-pages@v4
 
-            - name: Upload Pages artifact
-              if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-              uses: actions/upload-pages-artifact@v3
-              with:
-                  path: ./reports
+      - name: Upload Pages artifact
+        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./reports
 
-            - name: Deploy to GitHub Pages
-              if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-              id: deployment
-              uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-            - name: Save validation history to cache
-              if: always()
-              uses: actions/cache@v4
-              with:
-                  path: true_lies_reporting/validation_history.json
-                  key: validation-history-${{ github.sha }}
+      - name: Generate summary
+        if: always()
+        run: |
+          echo "## 📊 True Lies Test Report Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Tests executed successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📄 Generated Reports:" >> $GITHUB_STEP_SUMMARY
+          ls -1 reports/*.html 2>/dev/null | grep -v "index.html" | while read file; do
+            filename=$(basename "$file")
+            echo "- $filename" >> $GITHUB_STEP_SUMMARY
+          done
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **View Reports:** https://thefreerangetester.github.io/demo_truelies/" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "_Reports include historical trend charts_" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
 
-            - name: Generate summary
-              if: always()
-              run: |
-                  echo "## 📊 True Lies Test Report Summary" >> $GITHUB_STEP_SUMMARY
-                  echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "✅ Tests executed successfully" >> $GITHUB_STEP_SUMMARY
-                  echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "### 📄 Generated Reports:" >> $GITHUB_STEP_SUMMARY
-                  ls -1 reports/*.html 2>/dev/null | grep -v "index.html" | while read file; do
-                    filename=$(basename "$file")
-                    echo "- $filename" >> $GITHUB_STEP_SUMMARY
-                  done
-                  echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "🔗 **View Reports:** https://thefreerangetester.github.io/demo_truelies/" >> $GITHUB_STEP_SUMMARY
-                  echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "_Reports include historical trend charts_" >> $GITHUB_STEP_SUMMARY
-                  echo "" >> $GITHUB_STEP_SUMMARY
+          # Show summary if history exists
+          if [ -f true_lies_reporting/validation_history.json ]; then
+            echo "### 📈 Validation History:" >> $GITHUB_STEP_SUMMARY
+            python3 << 'PYTHON'
+          import json
+          import os
 
-                  # Show summary if history exists
-                  if [ -f true_lies_reporting/validation_history.json ]; then
-                    echo "### 📈 Validation History:" >> $GITHUB_STEP_SUMMARY
-                    python3 << 'PYTHON'
-                  import json
-                  import os
+          try:
+              with open('true_lies_reporting/validation_history.json', 'r') as f:
+                  data = json.load(f)
+                  executions = data.get('executions', [])
+                  
+              if executions:
+                  latest = executions[-1]
+                  with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+                      f.write(f"- **Scenario:** {latest['scenario_name']}\n")
+                      f.write(f"- **Candidates Evaluated:** {latest['total_candidates']}\n")
+                      f.write(f"- **Passed:** {latest['passed']} ✅\n")
+                      f.write(f"- **Failed:** {latest['failed']} ❌\n")
+                      f.write(f"- **Pass Rate:** {latest['pass_rate']:.1f}%\n")
+                      f.write(f"- **Average Similarity:** {latest['avg_similarity_score']:.2%}\n")
+                      f.write(f"- **Average Factual Accuracy:** {latest['avg_factual_accuracy']:.1f}%\n")
+          except Exception as e:
+              print(f"Error reading history: {e}")
+          PYTHON
+          fi
 
-                  try:
-                      with open('true_lies_reporting/validation_history.json', 'r') as f:
-                          data = json.load(f)
-                          executions = data.get('executions', [])
-                          
-                      if executions:
-                          latest = executions[-1]
-                          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
-                              f.write(f"- **Scenario:** {latest['scenario_name']}\n")
-                              f.write(f"- **Candidates Evaluated:** {latest['total_candidates']}\n")
-                              f.write(f"- **Passed:** {latest['passed']} ✅\n")
-                              f.write(f"- **Failed:** {latest['failed']} ❌\n")
-                              f.write(f"- **Pass Rate:** {latest['pass_rate']:.1f}%\n")
-                              f.write(f"- **Average Similarity:** {latest['avg_similarity_score']:.2%}\n")
-                              f.write(f"- **Average Factual Accuracy:** {latest['avg_factual_accuracy']:.1f}%\n")
-                  except Exception as e:
-                      print(f"Error reading history: {e}")
-                  PYTHON
-                  fi
+      - name: Comment on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let historyData = '';
 
-            - name: Comment on PR
-              if: github.event_name == 'pull_request'
-              uses: actions/github-script@v7
-              with:
-                  script: |
-                      const fs = require('fs');
-                      let historyData = '';
+            try {
+              const history = JSON.parse(fs.readFileSync('true_lies_reporting/validation_history.json', 'utf8'));
+              const latest = history.executions[history.executions.length - 1];
+              
+              historyData = `
+            ### 📈 Latest Test Results:
+            - **Scenario:** ${latest.scenario_name}
+            - **Candidates Evaluated:** ${latest.total_candidates}
+            - **Passed:** ${latest.passed} ✅
+            - **Failed:** ${latest.failed} ❌
+            - **Pass Rate:** ${latest.pass_rate.toFixed(1)}%
+            - **Average Similarity:** ${(latest.avg_similarity_score * 100).toFixed(1)}%
+            - **Average Factual Accuracy:** ${latest.avg_factual_accuracy.toFixed(1)}%
+              `;
+            } catch (e) {
+              console.log('Could not read validation history');
+            }
 
-                      try {
-                        const history = JSON.parse(fs.readFileSync('true_lies_reporting/validation_history.json', 'utf8'));
-                        const latest = history.executions[history.executions.length - 1];
-                        
-                        historyData = `
-                      ### 📈 Latest Test Results:
-                      - **Scenario:** ${latest.scenario_name}
-                      - **Candidates Evaluated:** ${latest.total_candidates}
-                      - **Passed:** ${latest.passed} ✅
-                      - **Failed:** ${latest.failed} ❌
-                      - **Pass Rate:** ${latest.pass_rate.toFixed(1)}%
-                      - **Average Similarity:** ${(latest.avg_similarity_score * 100).toFixed(1)}%
-                      - **Average Factual Accuracy:** ${latest.avg_factual_accuracy.toFixed(1)}%
-                        `;
-                      } catch (e) {
-                        console.log('Could not read validation history');
-                      }
+            const body = `## 🎭 True Lies Test Reports
 
-                      const body = `## 🎭 True Lies Test Reports
+            ✅ Tests executed successfully.
+            ${historyData}
 
-                      ✅ Tests executed successfully.
-                      ${historyData}
+            🌐 **View Reports:** https://thefreerangetester.github.io/demo_truelies/
 
-                      🌐 **View Reports:** https://thefreerangetester.github.io/demo_truelies/
+            Reports are updated automatically after merging to main and include historical trend charts.
+            `;
 
-                      Reports are updated automatically after merging to main and include historical trend charts.
-                      `;
-
-                      github.rest.issues.createComment({
-                        issue_number: context.issue.number,
-                        owner: context.repo.owner,
-                        repo: context.repo.repo,
-                        body: body
-                      });
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });

@@ -477,24 +477,24 @@
             <div class="metric-label">Total Candidates</div>
         </div>
         <div class="metric-card danger">
-            <div class="metric-value">53.3%</div>
+            <div class="metric-value">0.0%</div>
             <div class="metric-label">Success Rate</div>
         </div>
         <div class="metric-card">
-            <div class="metric-value">8</div>
+            <div class="metric-value">0</div>
             <div class="metric-label">Passed</div>
         </div>
         <div class="metric-card danger">
-            <div class="metric-value">7</div>
+            <div class="metric-value">15</div>
             <div class="metric-label">Failed</div>
         </div>
         <div class="metric-card">
-            <div class="metric-value">0.99</div>
+            <div class="metric-value">0.65</div>
             <div class="metric-label">Average Score</div>
         </div>
     </div>
     <div class="generated-info">
-        📅 Generated on 10/13/2025 at 21:39
+        📅 Generated on 10/14/2025 at 06:19
     </div>
 </header>
         <section class="charts-section">
@@ -550,12 +550,12 @@
             </thead>
             <tbody><tr class="result-row">
                 <td class="candidate-id">1</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-good">0.832</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_1')" class="btn-details" id="btn-details_1">View Details</button>
                 </td>
@@ -566,10 +566,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 1</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454118</div>
+                <div><strong>Retention Score:</strong> 0.832</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839691</div>
             </div>
         
 
@@ -603,11 +603,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -615,11 +615,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -627,11 +627,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -639,11 +639,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -653,12 +653,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.832</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
             </div>
             
 
@@ -668,7 +668,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment is with Dr. Sarah Green, specialist in Ophthalmology, on 2025-10-09 at 4:30 PM at Southview Medical.</div>
+                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Unfortunately, your appointment with Dr. Sarah Green has been canceled due to an emergency.</div>
                 </div>
                 
 
@@ -677,12 +677,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">2</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-fail">0.249</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">1/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_2')" class="btn-details" id="btn-details_2">View Details</button>
                 </td>
@@ -693,10 +693,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 2</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454131</div>
+                <div><strong>Retention Score:</strong> 0.249</div>
+                <div><strong>Facts Retained:</strong> 1/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839734</div>
             </div>
         
 
@@ -718,11 +718,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -730,11 +730,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -742,11 +742,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -754,11 +754,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -766,11 +766,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -780,12 +780,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.249</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
             </div>
             
 
@@ -795,7 +795,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Hi Sophia! You're scheduled to see Dr. Sarah Green for Ophthalmology on October 9th, 2025 at 4:30 PM in Southview Medical Clinic.</div>
+                    <div class="text-content candidate-text">Hi Sophia! You don't have any appointments scheduled right now.</div>
                 </div>
                 
 
@@ -804,12 +804,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">3</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-acceptable">0.754</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_3')" class="btn-details" id="btn-details_3">View Details</button>
                 </td>
@@ -820,10 +820,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 3</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454137</div>
+                <div><strong>Retention Score:</strong> 0.754</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839746</div>
             </div>
         
 
@@ -857,11 +857,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -869,11 +869,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -881,11 +881,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -893,11 +893,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -907,12 +907,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.754</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> positive</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
             </div>
             
 
@@ -922,7 +922,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Sophia Lopez, your upcoming Ophthalmology appointment with Dr. Sarah Green is set for 4:30 PM on October 9, 2025 at Southview Medical.</div>
+                    <div class="text-content candidate-text">Good news, Sophia Lopez! Your next appointment was moved to 2025-10-20 and will be online via Zoom with Dr. Sarah Green.</div>
                 </div>
                 
 
@@ -931,12 +931,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">4</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-acceptable">0.768</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">3/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_4')" class="btn-details" id="btn-details_4">View Details</button>
                 </td>
@@ -947,10 +947,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 4</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454142</div>
+                <div><strong>Retention Score:</strong> 0.768</div>
+                <div><strong>Facts Retained:</strong> 3/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839752</div>
             </div>
         
 
@@ -972,11 +972,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -984,11 +984,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1008,11 +1008,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1034,12 +1034,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.768</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> positive</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
             </div>
             
 
@@ -1049,7 +1049,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Sure thing, Sophia! You'll be meeting Dr. Sarah Green from Ophthalmology on the 9th of October at 4:30 PM at our Southview Medical branch.</div>
+                    <div class="text-content candidate-text">Hello, Sophia! Dr. Green won't be available, but we rescheduled you with Dr. Michael Brown for 2025-10-09 at Southview Medical.</div>
                 </div>
                 
 
@@ -1058,12 +1058,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">5</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-poor">0.509</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">3/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_5')" class="btn-details" id="btn-details_5">View Details</button>
                 </td>
@@ -1074,10 +1074,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 5</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454146</div>
+                <div><strong>Retention Score:</strong> 0.509</div>
+                <div><strong>Facts Retained:</strong> 3/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839758</div>
             </div>
         
 
@@ -1099,11 +1099,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1135,11 +1135,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1147,11 +1147,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1161,12 +1161,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.509</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
             </div>
             
 
@@ -1176,7 +1176,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Certainly, Ms. Lopez. Your next Ophthalmology appointment with Dr. Sarah Green is on October 9, 2025 at 4:30 PM at Southview Medical.</div>
+                    <div class="text-content candidate-text">Hey Sophia! I can't find your Ophthalmology appointment, but you have one with Dr. Emily Smith for Cardiology on 2025-10-09.</div>
                 </div>
                 
 
@@ -1185,12 +1185,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">6</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-good">0.897</td>
                 <td class="status-cell danger">
                     ✗ FAIL
                 </td>
-                <td class="facts-cell">5/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_6')" class="btn-details" id="btn-details_6">View Details</button>
                 </td>
@@ -1201,10 +1201,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 6</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 5/6</div>
+                <div><strong>Retention Score:</strong> 0.897</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454151</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839762</div>
             </div>
         
 
@@ -1238,11 +1238,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1250,11 +1250,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1262,11 +1262,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1288,7 +1288,7 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.897</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
@@ -1303,7 +1303,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment with Dr. Sarah Green in Ophthalmology is on 2025-10-09 at 4:30 PM.</div>
+                    <div class="text-content candidate-text">Let me help you, Sophia! You're seeing Dr. Sarah Green tomorrow at 4: 30 PM — please bring your medical documents.</div>
                 </div>
                 
 
@@ -1312,12 +1312,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">7</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-poor">0.700</td>
                 <td class="status-cell danger">
                     ✗ FAIL
                 </td>
-                <td class="facts-cell">4/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">3/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_7')" class="btn-details" id="btn-details_7">View Details</button>
                 </td>
@@ -1328,10 +1328,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 7</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/6</div>
+                <div><strong>Retention Score:</strong> 0.700</div>
+                <div><strong>Facts Retained:</strong> 3/6</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454155</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839766</div>
             </div>
         
 
@@ -1401,11 +1401,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1415,7 +1415,7 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.700</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
@@ -1430,7 +1430,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment with Dr. Sarah Green is on 2025-10-09 at 3:30 PM at Southview Medical.</div>
+                    <div class="text-content candidate-text">Hi Sophia, your next visit is with Dr. Sarah Green, dentist, on October 9th, 2025.</div>
                 </div>
                 
 
@@ -1439,12 +1439,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">8</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-fail">0.407</td>
                 <td class="status-cell danger">
                     ✗ FAIL
                 </td>
-                <td class="facts-cell">4/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">1/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_8')" class="btn-details" id="btn-details_8">View Details</button>
                 </td>
@@ -1455,10 +1455,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 8</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/6</div>
+                <div><strong>Retention Score:</strong> 0.407</div>
+                <div><strong>Facts Retained:</strong> 1/6</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454159</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839771</div>
             </div>
         
 
@@ -1468,11 +1468,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">FullName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Sophia Lopez</div>
-                        <div><strong>Extracted:</strong> Sophia Lopez</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1480,11 +1480,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1516,11 +1516,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1542,12 +1542,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.407</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> positive</div>
                 </div>
-                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
             </div>
             
 
@@ -1557,7 +1557,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment with Dr. Sarah Green is on 2025-10-10 at 4:30 PM at Southview Medical.</div>
+                    <div class="text-content candidate-text">Good afternoon! Your appointment at Southview Medical has been delayed 2 hours due to maintenance.</div>
                 </div>
                 
 
@@ -1566,12 +1566,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">9</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-good">0.857</td>
                 <td class="status-cell danger">
                     ✗ FAIL
                 </td>
-                <td class="facts-cell">5/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_9')" class="btn-details" id="btn-details_9">View Details</button>
                 </td>
@@ -1582,10 +1582,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 9</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 5/6</div>
+                <div><strong>Retention Score:</strong> 0.857</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454163</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839775</div>
             </div>
         
 
@@ -1607,11 +1607,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✗">✗</span>
+                        <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> None</div>
+                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
                     </div>
                 </div>
                 
@@ -1619,11 +1619,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1631,11 +1631,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1643,11 +1643,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1655,11 +1655,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1669,7 +1669,7 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.857</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
@@ -1684,7 +1684,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment is with Dr. Emily Smith from Ophthalmology on 2025-10-09 at 4:30 PM at Southview Medical.</div>
+                    <div class="text-content candidate-text">Sophia Lopez, your appointment with Dr. Sarah Green was yesterday at 4: 30 PM. Hope it went well!</div>
                 </div>
                 
 
@@ -1693,12 +1693,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">10</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-fail">0.177</td>
                 <td class="status-cell danger">
                     ✗ FAIL
                 </td>
-                <td class="facts-cell">5/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">0/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_10')" class="btn-details" id="btn-details_10">View Details</button>
                 </td>
@@ -1709,10 +1709,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 10</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 5/6</div>
+                <div><strong>Retention Score:</strong> 0.177</div>
+                <div><strong>Facts Retained:</strong> 0/6</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454167</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839779</div>
             </div>
         
 
@@ -1722,11 +1722,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">FullName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Sophia Lopez</div>
-                        <div><strong>Extracted:</strong> Sophia Lopez</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1734,11 +1734,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1758,11 +1758,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1770,11 +1770,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1782,11 +1782,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1796,12 +1796,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.177</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
-                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
             </div>
             
 
@@ -1811,7 +1811,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment is with Dr. Sarah Green, specialist in Cardiology, on 2025-10-09 at 4:30 PM at Southview Medical.</div>
+                    <div class="text-content candidate-text">Let me check… I can't find any appointment for you, but would you like to schedule one?</div>
                 </div>
                 
 
@@ -1820,12 +1820,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">11</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-poor">0.664</td>
                 <td class="status-cell danger">
                     ✗ FAIL
                 </td>
-                <td class="facts-cell">4/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_11')" class="btn-details" id="btn-details_11">View Details</button>
                 </td>
@@ -1836,10 +1836,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 11</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/6</div>
+                <div><strong>Retention Score:</strong> 0.664</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454171</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839783</div>
             </div>
         
 
@@ -1861,11 +1861,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1897,11 +1897,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -1923,7 +1923,7 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.664</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
@@ -1938,7 +1938,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment is with Dr. Sarah Green on 2025-10-09 at 4:30 PM at Downtown Clinic.</div>
+                    <div class="text-content candidate-text">Hi Sophia, your next appointment is with Dr. Laura Chen in Pediatrics on 2025-10-09 at 4: 30 PM.</div>
                 </div>
                 
 
@@ -1947,12 +1947,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">12</td>
-                <td class="score-cell score-excellent">0.908</td>
+                <td class="score-cell score-good">0.871</td>
                 <td class="status-cell danger">
                     ✗ FAIL
                 </td>
-                <td class="facts-cell">4/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">3/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_12')" class="btn-details" id="btn-details_12">View Details</button>
                 </td>
@@ -1963,10 +1963,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 12</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 0.908</div>
-                <div><strong>Facts Retained:</strong> 4/6</div>
+                <div><strong>Retention Score:</strong> 0.871</div>
+                <div><strong>Facts Retained:</strong> 3/6</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454175</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839787</div>
             </div>
         
 
@@ -1988,11 +1988,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✗">✗</span>
+                        <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Dr. Sarah Green</div>
-                        <div><strong>Extracted:</strong> None</div>
+                        <div><strong>Extracted:</strong> Dr. Sarah Green</div>
                     </div>
                 </div>
                 
@@ -2024,11 +2024,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2036,11 +2036,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2050,7 +2050,7 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 0.908</div>
+                    <div><strong>Similarity Score:</strong> 0.871</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
@@ -2065,7 +2065,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Sophia, your next appointment is on 2025-10-09 at 4:30 PM at Southview Medical.</div>
+                    <div class="text-content candidate-text">Hello Sophia Lopez! You've been assigned to Dr. Sarah Green for a surgical evaluation on 2025-10-09 at 4: 30 PM.</div>
                 </div>
                 
 
@@ -2074,12 +2074,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">13</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-acceptable">0.794</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_13')" class="btn-details" id="btn-details_13">View Details</button>
                 </td>
@@ -2090,10 +2090,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 13</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454179</div>
+                <div><strong>Retention Score:</strong> 0.794</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839791</div>
             </div>
         
 
@@ -2127,11 +2127,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2139,11 +2139,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2151,11 +2151,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2163,11 +2163,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2177,12 +2177,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.794</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
             </div>
             
 
@@ -2192,7 +2192,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Hey Sophia! You're booked with Dr. Sarah Green (Ophthalmology) on October 9th at 4:30 PM — Southview Medical.</div>
+                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! You're seeing Dr. Sarah Green for an eye surgery at Downtown Clinic next week.</div>
                 </div>
                 
 
@@ -2201,12 +2201,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">14</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-poor">0.612</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_14')" class="btn-details" id="btn-details_14">View Details</button>
                 </td>
@@ -2217,10 +2217,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 14</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454183</div>
+                <div><strong>Retention Score:</strong> 0.612</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839795</div>
             </div>
         
 
@@ -2254,11 +2254,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2266,11 +2266,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2278,11 +2278,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2290,11 +2290,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2304,12 +2304,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.612</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
             </div>
             
 
@@ -2319,7 +2319,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me check that for you, Sophia Lopez. According to our system, your next medical visit is scheduled with Dr. Sarah Green, Ophthalmology specialist, on Thursday, October 9th 2025 at 4:30 PM, Southview Medical Center.</div>
+                    <div class="text-content candidate-text">Sophia, according to our records, you missed your last appointment with Dr. Sarah Green.</div>
                 </div>
                 
 
@@ -2328,12 +2328,12 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">15</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-poor">0.639</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">6/6</td>
-                <td class="date-cell">13/10/2025 21:39</td>
+                <td class="facts-cell">2/6</td>
+                <td class="date-cell">14/10/2025 06:19</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_15')" class="btn-details" id="btn-details_15">View Details</button>
                 </td>
@@ -2344,10 +2344,10 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 15</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 6/6</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-10-13T21:39:04.454187</div>
+                <div><strong>Retention Score:</strong> 0.639</div>
+                <div><strong>Facts Retained:</strong> 2/6</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-10-14T06:19:24.839799</div>
             </div>
         
 
@@ -2381,11 +2381,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">Specialty</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Ophthalmology</div>
-                        <div><strong>Extracted:</strong> Ophthalmology</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2393,11 +2393,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 2025-10-09</div>
-                        <div><strong>Extracted:</strong> 2025-10-09</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2405,11 +2405,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> 4:30 PM</div>
-                        <div><strong>Extracted:</strong> 4:30 PM</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2417,11 +2417,11 @@
                 <div class="fact-detail">
                     <div class="fact-header">
                         <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
+                        <span class="fact-status ✗">✗</span>
                     </div>
                     <div class="fact-info">
                         <div><strong>Expected:</strong> Southview Medical</div>
-                        <div><strong>Extracted:</strong> Southview Medical</div>
+                        <div><strong>Extracted:</strong> None</div>
                     </div>
                 </div>
                 
@@ -2431,12 +2431,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.639</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
                     <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Factual accuracy issues detected</div>
             </div>
             
 
@@ -2446,7 +2446,7 @@
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Let me help you, Sophia Lopez! Your next appointment at 4:30 PM on 2025-10-09 is with Dr. Sarah Green, Ophthalmology specialist, located in Southview Medical.</div>
+                    <div class="text-content candidate-text">Hi Sophia! Your next appointment is with Dr. Sarah Green, but you must complete a payment of USD 40 before confirming.</div>
                 </div>
                 
 
@@ -2595,8 +2595,8 @@
         
         
         // Real data for charts
-        const temporalData = {"labels": ["10/13"], "scores": [53.3], "counts": [15], "similarity_scores": [99.4], "fact_retention_scores": [87.8]};
-        const comparisonData = {"current_period": 53.3, "previous_period": 0.0, "historical_average": 53.3, "target": 80};
+        const temporalData = {"labels": ["10/13", "10/14"], "scores": [53.3, 0.0], "counts": [15, 15], "similarity_scores": [99.4, 64.9], "fact_retention_scores": [87.8, 33.3]};
+        const comparisonData = {"current_period": 40.0, "previous_period": 0.0, "historical_average": 40.0, "target": 80};
         
         // Gráfico de distribución de éxito
         const successRateCtx = document.getElementById('successRateChart').getContext('2d');
@@ -2605,7 +2605,7 @@
             data: {
                 labels: ['Passed', 'Failed'],
                 datasets: [{
-                    data: [8, 7],
+                    data: [0, 15],
                     backgroundColor: ['#28a745', '#dc3545'],
                     borderWidth: 2,
                     borderColor: '#fff'
