@@ -225,14 +225,20 @@ jobs:
                   echo "📋 Reportes preparados:"
                   ls -la reports/
 
-            - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v4
+            - name: Setup Pages
               if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+              uses: actions/configure-pages@v4
+              
+            - name: Upload Pages artifact
+              if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+              uses: actions/upload-pages-artifact@v3
               with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./reports
-                  keep_files: false
-                  force_orphan: true
+                  path: ./reports
+                  
+            - name: Deploy to GitHub Pages
+              if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+              id: deployment
+              uses: actions/deploy-pages@v4
 
             - name: Save validation history to cache
               if: always()
