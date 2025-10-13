@@ -34,11 +34,11 @@ jobs:
         run: |
           mkdir -p true_lies_reporting
 
-      - name: Restore validation history
-        uses: actions/cache@v4
+      - name: Restore validation history from cache
+        uses: actions/cache/restore@v4
         with:
           path: true_lies_reporting/validation_history.json
-          key: validation-history-${{ github.sha }}
+          key: validation-history-${{ github.ref_name }}
           restore-keys: |
             validation-history-
 
@@ -242,6 +242,13 @@ jobs:
         if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Save validation history to cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: true_lies_reporting/validation_history.json
+          key: validation-history-${{ github.ref_name }}
 
       - name: Generate summary
         if: always()
