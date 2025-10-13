@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>True Lies Test Reports</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    .header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .report-list {
+      list-style: none;
+    }
+    .report-item {
+      padding: 16px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: all 0.3s ease;
+    }
+    .report-item:last-child {
+      border-bottom: none;
+    }
+    .report-item:hover {
+      background: #f8f9ff;
+      padding-left: 24px;
+    }
+    .report-item a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .report-item a:hover {
+      color: #764ba2;
+    }
+    .icon {
+      font-size: 24px;
+    }
+    .timestamp {
+      color: #666;
+      font-size: 14px;
+      margin-top: 8px;
+      margin-left: 34px;
+    }
+    .info-box {
+      background: #f8f9ff;
+      border-left: 4px solid #667eea;
+      padding: 16px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+    .info-box p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .info-box a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .info-box a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      color: white;
+      margin-top: 40px;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎭 True Lies Reports</h1>
+      <p>Validación automatizada de respuestas LLM</p>
+    </div>
+    
+    <div class="card">
+      <h2><span class="icon">📊</span> Reportes Disponibles</h2>
+      <ul class="report-list">
+                <li class='report-item'>
+                  <a href='clinic_semana_1.html'><span class='icon'>📄</span> clinic_semana_1.html</a>
+                  <div class='timestamp'>⏰ Generado: 2025-10-13 03:28:29 UTC</div>
+                </li>
+                <li class='report-item'>
+                  <a href='performance_semana_1.html'><span class='icon'>📄</span> performance_semana_1.html</a>
+                  <div class='timestamp'>⏰ Generado: 2025-10-13 03:28:29 UTC</div>
+                </li>
+      </ul>
+      
+      <div class="info-box">
+        <p><strong>📈 Historial de Validaciones:</strong></p>
+        <p>Los datos históricos para los trends están disponibles en <a href="validation_history.json">validation_history.json</a></p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2><span class="icon">ℹ️</span> Información</h2>
+      <p style="color: #555; line-height: 1.8;">
+        Estos reportes fueron generados automáticamente por <strong>True Lies Validator</strong> 
+        durante la ejecución de los tests en GitHub Actions. Los reportes incluyen métricas de 
+        similitud semántica, exactitud factual y análisis de polaridad para cada candidato evaluado.
+      </p>
+    </div>
+    
+    <div class="footer">
+      <p>Powered by True Lies Validator • GitHub Actions</p>
+    </div>
+  </div>
+</body>
+</html>
