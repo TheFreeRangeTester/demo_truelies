@@ -80,6 +80,30 @@ jobs:
           python tests/test_chatbot.py
         continue-on-error: true
 
+      - name: Verify history after tests
+        if: always()
+        run: |
+          echo "🔍 Checking validation history AFTER running tests..."
+          if [ -f true_lies_reporting/validation_history.json ]; then
+            echo "✅ validation_history.json exists"
+            echo "📊 File size: $(ls -lh true_lies_reporting/validation_history.json | awk '{print $5}')"
+            echo "📈 Total executions: $(cat true_lies_reporting/validation_history.json | python3 -c 'import json, sys; data=json.load(sys.stdin); print(len(data.get("executions", [])))')"
+            echo "📅 Unique dates:"
+            python3 << 'PYTHON'
+          import json
+          with open('true_lies_reporting/validation_history.json') as f:
+              data = json.load(f)
+              dates = set(e['timestamp'][:10] for e in data['executions'])
+              for date in sorted(dates):
+                  count = sum(1 for e in data['executions'] if e['timestamp'].startswith(date))
+                  print(f"  {date}: {count} executions")
+              print(f"\n🕐 Latest execution: {data['executions'][-1]['timestamp']}")
+          PYTHON
+          else
+            echo "❌ validation_history.json NOT FOUND after tests!"
+            ls -la true_lies_reporting/
+          fi
+
       - name: Prepare reports
         if: always()
         run: |
@@ -89,8 +113,25 @@ jobs:
           cp true_lies_reporting/*.html reports/ 2>/dev/null || echo "No HTML files found in true_lies_reporting"
 
           # Copiar el historial de validación
+          echo "📋 Copying validation history..."
           if [ -f true_lies_reporting/validation_history.json ]; then
+            echo "✅ Source file exists: true_lies_reporting/validation_history.json"
+            echo "📊 Source executions: $(cat true_lies_reporting/validation_history.json | python3 -c 'import json, sys; data=json.load(sys.stdin); print(len(data.get("executions", [])))')"
             cp true_lies_reporting/validation_history.json reports/
+            echo "✅ Copied to reports/validation_history.json"
+            echo "📊 Destination executions: $(cat reports/validation_history.json | python3 -c 'import json, sys; data=json.load(sys.stdin); print(len(data.get("executions", [])))')"
+            echo "📅 Dates in copied file:"
+            python3 << 'PYTHON'
+          import json
+          with open('reports/validation_history.json') as f:
+              data = json.load(f)
+              dates = set(e['timestamp'][:10] for e in data['executions'])
+              for date in sorted(dates):
+                  count = sum(1 for e in data['executions'] if e['timestamp'].startswith(date))
+                  print(f"  {date}: {count} executions")
+          PYTHON
+          else
+            echo "❌ Source file NOT FOUND: true_lies_reporting/validation_history.json"
           fi
 
           # Create index page
