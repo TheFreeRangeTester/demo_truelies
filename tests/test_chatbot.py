@@ -42,12 +42,11 @@ candidates = [
     "Summary: Auto insurance policy POL-2024-001 with a coverage limit of $850 is active and in good standing."
 ]
 
-# 🚀 NUEVA FUNCIONALIDAD: Generar reporte HTML con UNA LÍNEA
 validation_result = validate_llm_candidates(
     scenario=scenario,
     candidates=candidates,
     threshold=0.5,
-    generate_html_report=False,  # ← ¡Esto genera el reporte automáticamente!
-    html_output_file="performance_semana_1.html",  # ← Nombre personalizado
-    html_title="Mis Tests de Validación"  # ← Título personalizado
+    generate_html_report=True,
+    html_output_file="true_lies_reporting/performance_semana_1.html",
+    html_title="Performance Tests - Week 1"
 )
