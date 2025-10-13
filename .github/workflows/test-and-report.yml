@@ -31,6 +31,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Restore validation history from cache
+        id: cache-restore
         uses: actions/cache/restore@v4
         with:
           path: true_lies_reporting/validation_history.json
@@ -42,6 +43,24 @@ jobs:
       - name: Create reporting directory
         run: |
           mkdir -p true_lies_reporting
+
+      - name: Fallback to gh-pages history if cache miss
+        if: steps.cache-restore.outputs.cache-hit != 'true'
+        continue-on-error: true
+        run: |
+          echo "📥 Cache miss - trying to fetch validation history from gh-pages branch..."
+          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
+            git fetch origin gh-pages --depth=1
+            if git show origin/gh-pages:validation_history.json > true_lies_reporting/validation_history.json 2>/dev/null; then
+              echo "✅ Successfully restored validation history from gh-pages"
+              echo "📊 History contents:"
+              cat true_lies_reporting/validation_history.json | python3 -m json.tool | head -20
+            else
+              echo "⚠️  No validation history found in gh-pages"
+            fi
+          else
+            echo "⚠️  gh-pages branch does not exist yet"
+          fi
 
       - name: Verify validation history
         run: |
