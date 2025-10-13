@@ -42,9 +42,10 @@ jobs:
                   restore-keys: |
                       validation-history-
 
-            - name: Run tests with pytest
+            - name: Run tests
               run: |
-                  pytest tests/ -v --tb=short
+                  python tests/test_clinic.py
+                  python tests/test_chatbot.py
               continue-on-error: true
 
             - name: Prepare reports

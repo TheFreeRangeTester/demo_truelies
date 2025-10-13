@@ -1,6 +1,4 @@
-# Testing y validación
-pytest==7.4.3
-pytest-asyncio==0.21.1
+# Testing and validation
 true-lies-validator>=0.8.0
 
 # Desarrollo (opcional)

@@ -55,10 +55,11 @@ chatbot-test/
 
 ```bash
 # Run all tests
-pytest tests/ -v
+python tests/test_clinic.py
+python tests/test_chatbot.py
 
 # Run a specific test
-pytest tests/test_clinic.py -v
+python tests/test_clinic.py
 ```
 
 Tests will automatically generate HTML reports in the root directory and in `true_lies_reporting/`.
@@ -123,7 +124,6 @@ flake8 tests/
 
 - **Python 3.13** - Programming language
 - **True Lies Validator** - LLM response validation
-- **pytest** - Testing framework
 - **GitHub Actions** - Continuous integration and automated reporting
 
 ## 📝 Notes
