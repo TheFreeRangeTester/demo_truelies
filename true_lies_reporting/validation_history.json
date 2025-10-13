@@ -1,0 +1,24 @@
+{
+  "executions": [
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 15,
+      "passed": 8,
+      "failed": 7,
+      "pass_rate": 53.333333333333336,
+      "avg_similarity_score": 0.9938799489144317,
+      "avg_factual_accuracy": 87.77777777777777,
+      "timestamp": "2025-10-13T15:29:01.958386"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 15,
+      "passed": 8,
+      "failed": 7,
+      "pass_rate": 53.333333333333336,
+      "avg_similarity_score": 0.9938799489144317,
+      "avg_factual_accuracy": 87.77777777777777,
+      "timestamp": "2025-10-13T15:42:19.439863"
+    }
+  ]
+}
