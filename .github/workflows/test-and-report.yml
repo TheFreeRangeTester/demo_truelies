@@ -30,17 +30,30 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Create reporting directory
-        run: |
-          mkdir -p true_lies_reporting
-
       - name: Restore validation history from cache
         uses: actions/cache/restore@v4
         with:
           path: true_lies_reporting/validation_history.json
-          key: validation-history-${{ github.ref_name }}
+          key: validation-history-${{ github.ref_name }}-${{ github.run_id }}
           restore-keys: |
+            validation-history-${{ github.ref_name }}-
             validation-history-
+
+      - name: Create reporting directory
+        run: |
+          mkdir -p true_lies_reporting
+
+      - name: Verify validation history
+        run: |
+          if [ -f true_lies_reporting/validation_history.json ]; then
+            echo "✅ Validation history found"
+            echo "📊 History contents:"
+            cat true_lies_reporting/validation_history.json | python3 -m json.tool | head -30
+            echo "..."
+            echo "📈 Total executions: $(cat true_lies_reporting/validation_history.json | python3 -c 'import json, sys; data=json.load(sys.stdin); print(len(data.get("executions", [])))')"
+          else
+            echo "⚠️  No validation history found - this is the first execution"
+          fi
 
       - name: Run tests
         run: |
@@ -248,7 +261,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: true_lies_reporting/validation_history.json
-          key: validation-history-${{ github.ref_name }}
+          key: validation-history-${{ github.ref_name }}-${{ github.run_id }}
 
       - name: Generate summary
         if: always()
