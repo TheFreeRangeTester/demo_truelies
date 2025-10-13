@@ -93,15 +93,17 @@ El proyecto incluye un workflow de GitHub Actions que:
 1. ✅ Ejecuta automáticamente los tests en cada push/PR
 2. 📊 Genera reportes HTML con True Lies
 3. 📈 Preserva el historial de validaciones para trends
-4. 📦 Publica los reportes como artifacts descargables
+4. 🌐 Publica los reportes en GitHub Pages
 5. 💬 Comenta en PRs con resumen de resultados
 
-#### Descargar reportes de GitHub Actions
+#### Ver reportes en GitHub Pages
 
-1. Ve a la pestaña **Actions** de tu repositorio
-2. Selecciona la ejecución del workflow
-3. Descarga el artifact `true-lies-reports-[número]`
-4. Descomprime y abre `index.html`
+Los reportes están publicados en: **https://thefreerangetester.github.io/demo_truelies/**
+
+- Acceso directo desde el navegador
+- Se actualizan automáticamente con cada push a main
+- Incluyen gráficos de tendencias históricas
+- Sin necesidad de descargar archivos
 
 📖 Para más detalles, consulta [`.github/workflows/README.md`](.github/workflows/README.md)
 

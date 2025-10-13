@@ -223,13 +223,13 @@ jobs:
                   echo "📋 Reportes preparados:"
                   ls -la reports/
 
-            - name: Upload HTML Reports
-              uses: actions/upload-artifact@v4
-              if: always()
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v4
+              if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
               with:
-                  name: true-lies-reports-${{ github.run_number }}
-                  path: reports/
-                  retention-days: 30
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./reports
+                  keep_files: false
 
             - name: Save validation history to cache
               if: always()
@@ -251,7 +251,9 @@ jobs:
                     echo "- $filename" >> $GITHUB_STEP_SUMMARY
                   done
                   echo "" >> $GITHUB_STEP_SUMMARY
-                  echo "🔗 **Los reportes están disponibles en los artifacts de esta ejecución**" >> $GITHUB_STEP_SUMMARY
+                  echo "🔗 **Ver reportes:** https://thefreerangetester.github.io/demo_truelies/" >> $GITHUB_STEP_SUMMARY
+                  echo "" >> $GITHUB_STEP_SUMMARY
+                  echo "_Los reportes incluyen gráficos de tendencias históricas_" >> $GITHUB_STEP_SUMMARY
                   echo "" >> $GITHUB_STEP_SUMMARY
 
                   # Si existe el historial, mostrar un resumen
@@ -312,12 +314,9 @@ jobs:
                       ✅ Los tests se han ejecutado correctamente.
                       ${historyData}
 
-                      📦 **Los reportes HTML están disponibles en los artifacts de esta ejecución.**
+                      🌐 **Ver reportes en vivo:** https://thefreerangetester.github.io/demo_truelies/
 
-                      Para descargarlos:
-                      1. Ve a la pestaña "Actions" de este PR
-                      2. Busca la ejecución de este workflow
-                      3. Descarga el artifact \`true-lies-reports-${context.runNumber}\`
+                      Los reportes se actualizan automáticamente después del merge a main e incluyen gráficos de tendencias históricas.
                       `;
 
                       github.rest.issues.createComment({
