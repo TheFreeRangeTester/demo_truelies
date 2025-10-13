@@ -77,5 +77,5 @@ validation_result = validate_llm_candidates(
     threshold=0.5,
     generate_html_report=True,
     html_output_file="true_lies_reporting/clinic_semana_1.html",
-    html_title="Tests de Clínica"
+    html_title="Clinic Tests - Week 1"
 )
