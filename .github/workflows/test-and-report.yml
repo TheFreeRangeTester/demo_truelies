@@ -12,6 +12,8 @@ jobs:
         runs-on: ubuntu-latest
         permissions:
             contents: write
+            pages: write
+            id-token: write
 
         steps:
             - name: Checkout code
@@ -228,13 +230,13 @@ jobs:
             - name: Setup Pages
               if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
               uses: actions/configure-pages@v4
-              
+
             - name: Upload Pages artifact
               if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
               uses: actions/upload-pages-artifact@v3
               with:
                   path: ./reports
-                  
+
             - name: Deploy to GitHub Pages
               if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
               id: deployment
