@@ -20,7 +20,6 @@ venv\Scripts\activate     # En Windows
 
 ```bash
 pip install -r requirements.txt
-pip install true-lies-validator>=0.8.0
 ```
 
 ### 3. Configurar variables de entorno
@@ -123,9 +122,7 @@ flake8 tests/
 - **Python 3.13** - Lenguaje de programación
 - **True Lies Validator** - Validación de respuestas LLM
 - **pytest** - Framework de testing
-- **NLTK** - Procesamiento de lenguaje natural
-- **GitHub Actions** - Integración continua
-- **scikit-learn** - Machine Learning
+- **GitHub Actions** - Integración continua y reportes automatizados
 
 ## 📝 Notas
 
