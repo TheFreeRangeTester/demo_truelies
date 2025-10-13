@@ -1,21 +1,10 @@
 import json
 from true_lies import validate_llm_candidates
 
-# Facts that MUST be in the response
-facts = {
-    'policy_number': {'extractor': 'categorical', 'expected': 'POL-2024-001', 'patterns':{ 'POL-2024-001': ['POL-2024-001', 'POL-2024-002', 'POL-2024-003'] }},
-    'amount': {'extractor': 'money', 'expected': '850'},
-    'coverage_type': {'extractor': 'categorical',
-    'expected': 'auto insurance',
-    'patterns': {
-        'auto insurance': [
-            'auto insurance', 'car insurance', 'automobile', 'motor insurance', 'auto policy',
-            'car policy', 'automobile policy',
-            'motor policy', 'auto coverage', 'car coverage',
-            'automobile coverage', 'vehicle'
-        ]
-    }}
-}
+# Load facts from JSON file
+with open('tests/data/chatbot_facts.json', 'r') as f:
+    data = json.load(f)
+    facts = data['facts']
 
 # Reference text for semantic comparison
 reference_text = "Your auto insurance policy #POL-2024-001 has a premium of $850"
