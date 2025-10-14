@@ -25,7 +25,7 @@ validation_result = validate_llm_candidates(
     scenario=scenario,
     candidates=candidates,
     threshold=0.5,
-    generate_html_report=True,
+    generate_html_report=False,
     html_output_file="true_lies_reporting/performance_semana_1.html",
     html_title="Performance Tests - Week 1"
 )

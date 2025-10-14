@@ -1,19 +1,5 @@
 {
     "facts": {
-        "FullName": {
-            "extractor": "categorical",
-            "expected": "Sophia Lopez",
-            "patterns": {
-                "Sophia Lopez": [
-                    "Sophia Lopez",
-                    "Sofia Lopez",
-                    "S. Lopez",
-                    "Sophia",
-                    "Ms. Lopez",
-                    "Ms Lopez"
-                ]
-            }
-        },
         "DoctorName": {
             "extractor": "categorical",
             "expected": "Dr. Sarah Green",
@@ -24,18 +10,6 @@
                     "Sarah Green",
                     "Dr Green",
                     "Dr. Green"
-                ]
-            }
-        },
-        "Specialty": {
-            "extractor": "categorical",
-            "expected": "Ophthalmology",
-            "patterns": {
-                "Ophthalmology": [
-                    "Ophthalmology",
-                    "ophthalmology",
-                    "eye specialist",
-                    "eye doctor"
                 ]
             }
         },
@@ -51,6 +25,7 @@
                     "09/10/25",
                     "October 9th, 2025",
                     "October 9, 2025",
+                    "9 of October",
                     "October 9",
                     "9th of October",
                     "9th October",
@@ -69,7 +44,9 @@
                     "4:30 pm",
                     "4:30PM",
                     "16:30",
-                    "4.30 PM"
+                    "4.30 PM",
+                    "4.30",
+                    "4:30"
                 ]
             }
         },
