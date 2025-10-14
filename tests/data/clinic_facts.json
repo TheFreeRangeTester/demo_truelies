@@ -22,7 +22,8 @@
                     "Dr. Sarah Green",
                     "Doctor Sarah Green",
                     "Sarah Green",
-                    "Dr Green"
+                    "Dr Green",
+                    "Dr. Green"
                 ]
             }
         },
@@ -50,9 +51,12 @@
                     "09/10/25",
                     "October 9th, 2025",
                     "October 9, 2025",
+                    "October 9",
                     "9th of October",
+                    "9th October",
                     "October 9th",
-                    "Oct 9, 2025"
+                    "Oct 9, 2025",
+                    "09 October 2025"
                 ]
             }
         },
