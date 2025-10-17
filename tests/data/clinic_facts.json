@@ -2,66 +2,64 @@
     "facts": {
         "DoctorName": {
             "extractor": "categorical",
-            "expected": "Dr. Sarah Green",
+            "expected": "Dr. García",
             "patterns": {
                 "Dr. Sarah Green": [
-                    "Dr. Sarah Green",
-                    "Doctor Sarah Green",
-                    "Sarah Green",
-                    "Dr Green",
-                    "Dr. Green"
+                    "Doctor García",
+                    "Doctor Garcia",
+                    "Dr. Garcia",
+                    "Dr Garcia",
+                    "Dr García"
                 ]
             }
         },
         "AppointmentDate": {
             "extractor": "categorical",
-            "expected": "2025-10-09",
+            "expected": "2025-10-10",
             "patterns": {
                 "2025-10-09": [
-                    "2025-10-09",
-                    "10-09-2025",
-                    "09-10-2025",
-                    "09/10/2025",
-                    "09/10/25",
-                    "October 9th, 2025",
-                    "October 9, 2025",
-                    "9 of October",
-                    "October 9",
-                    "9 October 2025",
-                    "9th of October",
-                    "9th October",
-                    "October 9th",
-                    "Oct 9, 2025",
-                    "09 October 2025"
+                    "2025-10-10",
+                    "10-10-2025",
+                    "10-10-2025",
+                    "10/10/2025",
+                    "10/10/25",
+                    "October 10th, 2025",
+                    "October 10, 2025",
+                    "10 of October",
+                    "October 10",
+                    "10 October 2025",
+                    "10th of October",
+                    "10th October",
+                    "October 10th",
+                    "Oct 10, 2025",
+                    "10 October 2025"
                 ]
             }
         },
         "AppointmentTime": {
             "extractor": "categorical",
-            "expected": "4:30 PM",
+            "expected": "2:30 PM",
             "patterns": {
                 "4:30 PM": [
-                    "4:30 PM",
-                    "4:30 pm",
-                    "4:30PM",
-                    "16:30",
-                    "4.30 PM",
-                    "4.30",
-                    "4:30"
+                    "2:30 PM",
+                    "2:30 pm",
+                    "2:30PM",
+                    "14:30",
+                    "2.30 PM",
+                    "2.30",
+                    "2:30"
                 ]
             }
         },
         "ClinicLocation": {
             "extractor": "categorical",
-            "expected": "Southview Medical",
+            "expected": "Green Valley Clinic",
             "patterns": {
                 "Southview Medical": [
-                    "Southview Medical",
-                    "Southview",
-                    "Southview Clinic",
-                    "Southview Medical Clinic",
-                    "Southview Medical Center",
-                    "Southview Medical branch"
+                    "Central",
+                    "Central Clinic",
+                    "Green Valley",
+                    "Clinic at Green Valley"
                 ]
             }
         }

@@ -6,7 +6,7 @@ with open('tests/data/clinic_facts.json', 'r') as f:
     data = json.load(f)
     facts = data['facts']
 
-reference_text = "Let me help you, Sophia Lopez! Your next appointment is with Dr. Sarah Green, specialist in Ophthalmology, on 2025-10-09 at 4:30 PM at Southview Medical."
+reference_text = "Your appointment with Dr. Garcia is confirmed for October 10th at 2:30 PM at Green Valley Clinic."
 
 scenario = {
     "name": "What is the next appointment for Sophia Lopez?",
@@ -23,7 +23,7 @@ validation_result = validate_llm_candidates(
     scenario=scenario,
     candidates=candidates,
     threshold=0.5,
-    generate_html_report=True,
+    generate_html_report=False,
     html_output_file="true_lies_reporting/daily_clinic_model_performance.html",
     html_title="Clinic Tests"
 )
