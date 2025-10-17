@@ -23,7 +23,7 @@ validation_result = validate_llm_candidates(
     scenario=scenario,
     candidates=candidates,
     threshold=0.5,
-    generate_html_report=False,
+    generate_html_report=True,
     html_output_file="true_lies_reporting/daily_clinic_model_performance.html",
     html_title="Clinic Tests"
 )
