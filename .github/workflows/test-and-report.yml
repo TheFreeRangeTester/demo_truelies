@@ -30,29 +30,29 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Restore validation history from cache
-        id: cache-restore
-        uses: actions/cache/restore@v4
-        with:
-          path: true_lies_reporting/validation_history.json
-          key: validation-history-${{ github.ref_name }}-${{ github.run_id }}
-          restore-keys: |
-            validation-history-${{ github.ref_name }}-
-            validation-history-
+      # - name: Restore validation history from cache
+      #   id: cache-restore
+      #   uses: actions/cache/restore@v4
+      #   with:
+      #     path: true_lies_reporting/validation_history.json
+      #     key: validation-history-${{ github.ref_name }}-${{ github.run_id }}
+      #     restore-keys: |
+      #       validation-history-${{ github.ref_name }}-
+      #       validation-history-
 
       - name: Create reporting directory
         run: |
           mkdir -p true_lies_reporting
 
-      - name: Fallback to main branch history if cache miss
-        if: steps.cache-restore.outputs.cache-hit != 'true'
+      - name: Always restore latest validation history from main branch
         continue-on-error: true
         run: |
-          echo "📥 Cache miss - trying to fetch validation history from main branch..."
+          echo "📥 Always fetching latest validation history from main branch..."
           if git show origin/main:true_lies_reporting/validation_history.json > true_lies_reporting/validation_history.json 2>/dev/null; then
             echo "✅ Successfully restored validation history from main branch"
             echo "📊 History contents:"
             cat true_lies_reporting/validation_history.json | python3 -m json.tool | head -20
+            echo "📈 Total executions: $(cat true_lies_reporting/validation_history.json | python3 -c 'import json, sys; data=json.load(sys.stdin); print(len(data.get("executions", [])))')"
           else
             echo "⚠️  No validation history found in main branch"
           fi
@@ -311,12 +311,12 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Save validation history to cache
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: true_lies_reporting/validation_history.json
-          key: validation-history-${{ github.ref_name }}-${{ github.run_id }}
+      # - name: Save validation history to cache
+      #   if: always()
+      #   uses: actions/cache/save@v4
+      #   with:
+      #     path: true_lies_reporting/validation_history.json
+      #     key: validation-history-${{ github.ref_name }}-${{ github.run_id }}
 
       - name: Generate summary
         if: always()
