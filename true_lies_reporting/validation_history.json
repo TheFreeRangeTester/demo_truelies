@@ -119,6 +119,16 @@
       "avg_similarity_score": 0.7763977123600809,
       "avg_factual_accuracy": 100.0,
       "timestamp": "2025-10-17T16:56:44.447665"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 98,
+      "passed": 98,
+      "failed": 0,
+      "pass_rate": 100.0,
+      "avg_similarity_score": 0.9843036451971822,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-10-20T10:42:14.542250"
     }
   ]
 }
