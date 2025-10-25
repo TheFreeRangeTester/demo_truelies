@@ -22,7 +22,7 @@ with open('tests/data/clinic_candidates.json', 'r') as f:
 validation_result = validate_llm_candidates(
     scenario=scenario,
     candidates=candidates,
-    threshold=0.5,
+    threshold=0.7,
     generate_html_report=True,
     html_output_file="true_lies_reporting/daily_clinic_model_performance.html",
     html_title="Clinic Tests"
