@@ -1,5 +1,5 @@
 # Testing and validation
-true-lies-validator>=0.8.0
+true-lies-validator>=0.9.0
 
 # Desarrollo (opcional)
 # black==23.11.0
