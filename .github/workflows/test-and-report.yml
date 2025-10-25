@@ -16,6 +16,9 @@ jobs:
       id-token: write
 
     steps:
+      - name: Set timezone to New Zealand
+        run: echo "TZ=Pacific/Auckland" >> $GITHUB_ENV
+
       - name: Checkout code
         uses: actions/checkout@v4
 
