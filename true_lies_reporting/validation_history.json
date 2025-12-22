@@ -29,6 +29,106 @@
       "avg_similarity_score": 0.4653887338390786,
       "avg_factual_accuracy": 100.0,
       "timestamp": "2025-12-22T10:28:18.195712"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 16,
+      "failed": 2,
+      "pass_rate": 88.88888888888889,
+      "avg_similarity_score": 0.9523866645228425,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:37:09.532805"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 16,
+      "failed": 2,
+      "pass_rate": 88.88888888888889,
+      "avg_similarity_score": 0.9523866645228425,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:37:14.658178"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 16,
+      "failed": 2,
+      "pass_rate": 88.88888888888889,
+      "avg_similarity_score": 0.9523866645228425,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:38:03.449659"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 16,
+      "failed": 2,
+      "pass_rate": 88.88888888888889,
+      "avg_similarity_score": 0.9479060892522637,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:39:44.869952"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 16,
+      "failed": 2,
+      "pass_rate": 88.88888888888889,
+      "avg_similarity_score": 0.9523866645228425,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:40:10.156925"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 16,
+      "failed": 2,
+      "pass_rate": 88.88888888888889,
+      "avg_similarity_score": 0.9442854566067257,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:40:55.021630"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 15,
+      "failed": 3,
+      "pass_rate": 83.33333333333334,
+      "avg_similarity_score": 0.9442194531938664,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:42:16.795106"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 15,
+      "failed": 3,
+      "pass_rate": 83.33333333333334,
+      "avg_similarity_score": 0.9397388779232876,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:55:30.572441"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 15,
+      "failed": 3,
+      "pass_rate": 83.33333333333334,
+      "avg_similarity_score": 0.9397388779232876,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T10:55:43.300643"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 14,
+      "failed": 4,
+      "pass_rate": 77.77777777777779,
+      "avg_similarity_score": 0.9397388779232876,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-23T11:04:54.146052"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
     "candidates": [
-        "Just confirming: your appointment with Dr. Garcia will take place on October 10th at 2:30 PM at Green Valley Clinic.",
+        "Just confirming: your appointment with Dr. Garcia won't take place on October 10th at 2:30 PM at Green Valley Clinic.",
         "Appointment confirmed: Dr. Garcia, October 10th, 2:30 PM, Green Valley Clinic.",
-        "You have an appointment scheduled with Dr. Garcia on October 10th at 2:30 PM at Green Valley Clinic.",
+        "You do not have an appointment scheduled with Dr. Garcia on October 10th at 2:30 PM at Green Valley Clinic.",
         "Please note your appointment with Dr. Garcia is on October 10th at 2:30 PM at Green Valley Clinic.",
         "Your consultation with Dr. Garcia is set for October 10th at 2:30 PM at Green Valley Clinic.",
         "Your appointment with Dr. Garcia is confirmed for October 10th at 2:30 PM at Green Valley Clinic.",
