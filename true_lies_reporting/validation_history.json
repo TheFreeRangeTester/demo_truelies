@@ -9,6 +9,26 @@
       "avg_similarity_score": 0.9523866645228425,
       "avg_factual_accuracy": 100.0,
       "timestamp": "2025-12-22T10:22:55.784019"
+    },
+    {
+      "scenario_name": "What is the next appointment for Sophia Lopez?",
+      "total_candidates": 18,
+      "passed": 16,
+      "failed": 2,
+      "pass_rate": 88.88888888888889,
+      "avg_similarity_score": 0.9523866645228425,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-22T10:28:12.207704"
+    },
+    {
+      "scenario_name": "What is the cover for my auto policy POL-2024-001?",
+      "total_candidates": 12,
+      "passed": 6,
+      "failed": 6,
+      "pass_rate": 50.0,
+      "avg_similarity_score": 0.4653887338390786,
+      "avg_factual_accuracy": 100.0,
+      "timestamp": "2025-12-22T10:28:18.195712"
     }
   ]
 }

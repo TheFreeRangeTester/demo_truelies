@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinic Tests</title>
+    <title>Performance Tests - Week 1</title>
         <!-- Chart.js CDN -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- PDF Generation Libraries -->
@@ -500,26 +500,26 @@
 <body>
     <div class="container">
         <header class="report-header">
-    <h1>Clinic Tests</h1>
+    <h1>Performance Tests - Week 1</h1>
     <div class="metrics-grid">
         <div class="metric-card">
-            <div class="metric-value">18</div>
+            <div class="metric-value">12</div>
             <div class="metric-label">Total Candidates</div>
         </div>
-        <div class="metric-card success">
-            <div class="metric-value">88.9%</div>
+        <div class="metric-card danger">
+            <div class="metric-value">50.0%</div>
             <div class="metric-label">Success Rate</div>
         </div>
         <div class="metric-card">
-            <div class="metric-value">16</div>
+            <div class="metric-value">6</div>
             <div class="metric-label">Passed</div>
         </div>
         <div class="metric-card danger">
-            <div class="metric-value">2</div>
+            <div class="metric-value">6</div>
             <div class="metric-label">Failed</div>
         </div>
         <div class="metric-card">
-            <div class="metric-value">0.95</div>
+            <div class="metric-value">0.47</div>
             <div class="metric-label">Average Score</div>
         </div>
     </div>
@@ -580,11 +580,11 @@
             </thead>
             <tbody><tr class="result-row">
                 <td class="candidate-id">1</td>
-                <td class="score-cell score-excellent">0.963</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-fail">0.249</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_1')" class="btn-details" id="btn-details_1">View Details</button>
@@ -596,16 +596,16 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 1</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 0.963</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207350</div>
+                <div><strong>Retention Score:</strong> 0.249</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195415</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -614,48 +614,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -665,12 +653,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 0.963</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                    <div><strong>Similarity Score:</strong> 0.249</div>
+                    <div><strong>Polarity Match:</strong> ✗ No</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> negative</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
             </div>
             
 
@@ -680,13 +668,13 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Just confirming: your appointment with Dr. Garcia will take place on October 10th at 2:30 PM at Green Valley Clinic.</div>
+                    <div class="text-content candidate-text">Policy POL-2024-001 does not cover your automobile with monthly payments of $850</div>
                 </div>
                 
 
@@ -695,11 +683,11 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">2</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-acceptable">0.701</td>
                 <td class="status-cell success">
                     ✓ PASS
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_2')" class="btn-details" id="btn-details_2">View Details</button>
@@ -711,16 +699,16 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 2</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
+                <div><strong>Retention Score:</strong> 0.701</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
                 <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207364</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195427</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -729,48 +717,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -780,10 +756,10 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.701</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> positive</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
                 
             </div>
@@ -795,13 +771,13 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Appointment confirmed: Dr. Garcia, October 10th, 2:30 PM, Green Valley Clinic.</div>
+                    <div class="text-content candidate-text">Your car insurance policy POL-2024-001 costs $850 monthly</div>
                 </div>
                 
 
@@ -810,11 +786,11 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">3</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-acceptable">0.798</td>
                 <td class="status-cell success">
                     ✓ PASS
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_3')" class="btn-details" id="btn-details_3">View Details</button>
@@ -826,16 +802,16 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 3</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
+                <div><strong>Retention Score:</strong> 0.798</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
                 <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207369</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195432</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -844,48 +820,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -895,9 +859,9 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.798</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
                 
@@ -910,13 +874,13 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">You have an appointment scheduled with Dr. Garcia on October 10th at 2:30 PM at Green Valley Clinic.</div>
+                    <div class="text-content candidate-text">Your auto insurance policy POL-2024-001 provides coverage up to $850.</div>
                 </div>
                 
 
@@ -925,11 +889,11 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">4</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-fail">0.249</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_4')" class="btn-details" id="btn-details_4">View Details</button>
@@ -941,16 +905,16 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 4</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207373</div>
+                <div><strong>Retention Score:</strong> 0.249</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195436</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -959,48 +923,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -1010,12 +962,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.249</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> positive</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
             </div>
             
 
@@ -1025,13 +977,13 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Please note your appointment with Dr. Garcia is on October 10th at 2:30 PM at Green Valley Clinic.</div>
+                    <div class="text-content candidate-text">I can confirm that policy POL-2024-001 for your vehicle is active with $850 in coverage.</div>
                 </div>
                 
 
@@ -1040,11 +992,11 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">5</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-fail">0.397</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_5')" class="btn-details" id="btn-details_5">View Details</button>
@@ -1056,16 +1008,16 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 5</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207377</div>
+                <div><strong>Retention Score:</strong> 0.397</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195439</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -1074,48 +1026,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -1125,12 +1065,12 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.397</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> positive</div>
                 </div>
-                
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
             </div>
             
 
@@ -1140,13 +1080,13 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Your consultation with Dr. Garcia is set for October 10th at 2:30 PM at Green Valley Clinic.</div>
+                    <div class="text-content candidate-text">Great news! Your car insurance policy POL-2024-001 remains valid and offers $850 in protection.</div>
                 </div>
                 
 
@@ -1155,11 +1095,11 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">6</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="score-cell score-poor">0.545</td>
                 <td class="status-cell success">
                     ✓ PASS
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_6')" class="btn-details" id="btn-details_6">View Details</button>
@@ -1171,16 +1111,16 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 6</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
+                <div><strong>Retention Score:</strong> 0.545</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
                 <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207381</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195443</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -1189,48 +1129,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -1240,10 +1168,10 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.545</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> positive</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
                 
             </div>
@@ -1255,13 +1183,13 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Your appointment with Dr. Garcia is confirmed for October 10th at 2:30 PM at Green Valley Clinic.</div>
+                    <div class="text-content candidate-text">Policy POL-2024-001 is an auto insurance plan with a coverage amount of $850.</div>
                 </div>
                 
 
@@ -1270,11 +1198,11 @@
 </div></td></tr>
 <tr class="result-row">
                 <td class="candidate-id">7</td>
-                <td class="score-cell score-acceptable">0.787</td>
-                <td class="status-cell success">
-                    ✓ PASS
+                <td class="score-cell score-fail">0.409</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
                     <button onclick="toggleDetails('details_7')" class="btn-details" id="btn-details_7">View Details</button>
@@ -1286,706 +1214,16 @@
             <div class="detail-grid">
                 <div><strong>Test Name:</strong> Candidate 7</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 0.787</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207385</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 0.787</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">You're scheduled to see Dr. Garcia at Green Valley Clinic on October 10th at 2:30 PM.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">8</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_8')" class="btn-details" id="btn-details_8">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_8" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 8</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207496</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Your visit with Dr. Garcia at Green Valley Clinic is booked for October 10th at 2:30 PM.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">9</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_9')" class="btn-details" id="btn-details_9">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_9" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 9</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207500</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Your appointment with Dr. Garcia is on October 10th at 2:30 PM at Green Valley Clinic.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">10</td>
-                <td class="score-cell score-good">0.866</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_10')" class="btn-details" id="btn-details_10">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_10" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 10</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 0.866</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207504</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 0.866</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">This is a reminder of your upcoming visit with Dr. Garcia on October 10th at 2:30 PM at Green Valley Clinic.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">11</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_11')" class="btn-details" id="btn-details_11">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_11" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 11</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207508</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Your visit with Dr. Garcia is booked for October 10th at 2:30 PM at Green Valley Clinic.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">12</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_12')" class="btn-details" id="btn-details_12">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_12" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 12</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207512</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">This message confirms your appointment with Dr. Garcia at Green Valley Clinic on October 10th at 2:30 PM.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">13</td>
-                <td class="score-cell score-good">0.899</td>
-                <td class="status-cell danger">
-                    ✗ FAIL
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_13')" class="btn-details" id="btn-details_13">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_13" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 13</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 0.899</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
+                <div><strong>Retention Score:</strong> 0.409</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
                 <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207515</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195448</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -1994,48 +1232,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -2045,469 +1271,9 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 0.899</div>
-                    <div><strong>Polarity Match:</strong> ✗ No</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> negative</div>
-                </div>
-                <div class="failure-reason"><strong>Failure Reason:</strong> Polarity mismatch detected</div>
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Your appointment with Dr. Garcia is confirmed for October 10th at 2:30 PM at Green Valley Clinic, please try not to be late this time.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">14</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_14')" class="btn-details" id="btn-details_14">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_14" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 14</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207519</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.409</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> neutral</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Reminder: your visit with Dr. Garcia is on October 10th at 2:30 PM at Green Valley Clinic.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">15</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_15')" class="btn-details" id="btn-details_15">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_15" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 15</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207523</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> positive</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Your appointment with Dr. Garcia at Green Valley Clinic on October 10th at 2:30 PM is confirmed.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">16</td>
-                <td class="score-cell score-excellent">1.000</td>
-                <td class="status-cell success">
-                    ✓ PASS
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_16')" class="btn-details" id="btn-details_16">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_16" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 16</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207526</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
-                    <div><strong>Candidate Polarity:</strong> positive</div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Texts</h4>
-            <div class="conversation-texts">
-            
-
-                <div class="text-section">
-                    <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
-                </div>
-                
-
-                <div class="text-section">
-                    <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">Confirmed: Dr. Garcia, October 10th, 2:30 PM, Green Valley Clinic.</div>
-                </div>
-                
-
-            </div>
-            
-</div></td></tr>
-<tr class="result-row">
-                <td class="candidate-id">17</td>
-                <td class="score-cell score-poor">0.628</td>
-                <td class="status-cell danger">
-                    ✗ FAIL
-                </td>
-                <td class="facts-cell">4/4</td>
-                <td class="date-cell">22/12/2025 10:28</td>
-                <td class="actions-cell">
-                    <button onclick="toggleDetails('details_17')" class="btn-details" id="btn-details_17">View Details</button>
-                </td>
-            </tr>
-            <tr id="details_17" class="details-row" style="display: none;"><td colspan="6">
-        <div class="candidate-details">
-            <h4>Test Information</h4>
-            <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 17</div>
-                <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 0.628</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
-                <div><strong>All Retained:</strong> ✗ No</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207530</div>
-            </div>
-        
-
-            <div class="query-section">
-                <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
-            </div>
-            
-
-            <h4>Facts Analysis</h4>
-            <div class="facts-details">
-            
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
-                    </div>
-                </div>
-                
-            </div>
-            
-
-            <h4>Validation Details</h4>
-            <div class="validation-details">
-                <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 0.628</div>
-                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
                 <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
@@ -2520,13 +1286,13 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">You have an appointment with Dr. Garcia on October 10th at 2:30 PM at Green Valley Clinic. Also, remember to bring your payment information.</div>
+                    <div class="text-content candidate-text">Just a reminder: your auto policy POL-2024-001 currently covers you for $850.</div>
                 </div>
                 
 
@@ -2534,33 +1300,33 @@
             
 </div></td></tr>
 <tr class="result-row">
-                <td class="candidate-id">18</td>
-                <td class="score-cell score-excellent">1.000</td>
+                <td class="candidate-id">8</td>
+                <td class="score-cell score-poor">0.553</td>
                 <td class="status-cell success">
                     ✓ PASS
                 </td>
-                <td class="facts-cell">4/4</td>
+                <td class="facts-cell">3/3</td>
                 <td class="date-cell">22/12/2025 10:28</td>
                 <td class="actions-cell">
-                    <button onclick="toggleDetails('details_18')" class="btn-details" id="btn-details_18">View Details</button>
+                    <button onclick="toggleDetails('details_8')" class="btn-details" id="btn-details_8">View Details</button>
                 </td>
             </tr>
-            <tr id="details_18" class="details-row" style="display: none;"><td colspan="6">
+            <tr id="details_8" class="details-row" style="display: none;"><td colspan="6">
         <div class="candidate-details">
             <h4>Test Information</h4>
             <div class="detail-grid">
-                <div><strong>Test Name:</strong> Candidate 18</div>
+                <div><strong>Test Name:</strong> Candidate 8</div>
                 <div><strong>Test Category:</strong> LLM Validation</div>
-                <div><strong>Retention Score:</strong> 1.000</div>
-                <div><strong>Facts Retained:</strong> 4/4</div>
+                <div><strong>Retention Score:</strong> 0.553</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
                 <div><strong>All Retained:</strong> ✓ Yes</div>
-                <div><strong>Timestamp:</strong> 2025-12-22T10:28:12.207534</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195452</div>
             </div>
         
 
             <div class="query-section">
                 <h4>🔍 Query / Question</h4>
-                <div class="query-display">What is the next appointment for Sophia Lopez?</div>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
             </div>
             
 
@@ -2569,48 +1335,36 @@
             
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">DoctorName</span>
+                        <span class="fact-name">policy_number</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> Dr. Garcia</div>
-                        <div><strong>Extracted:</strong> Dr. Garcia</div>
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentDate</span>
+                        <span class="fact-name">amount</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2025-10-10</div>
-                        <div><strong>Extracted:</strong> 2025-10-10</div>
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
                     </div>
                 </div>
                 
 
                 <div class="fact-detail">
                     <div class="fact-header">
-                        <span class="fact-name">AppointmentTime</span>
+                        <span class="fact-name">coverage_type</span>
                         <span class="fact-status ✓">✓</span>
                     </div>
                     <div class="fact-info">
-                        <div><strong>Expected:</strong> 2:30 PM</div>
-                        <div><strong>Extracted:</strong> 2:30 PM</div>
-                    </div>
-                </div>
-                
-
-                <div class="fact-detail">
-                    <div class="fact-header">
-                        <span class="fact-name">ClinicLocation</span>
-                        <span class="fact-status ✓">✓</span>
-                    </div>
-                    <div class="fact-info">
-                        <div><strong>Expected:</strong> Green Valley Clinic</div>
-                        <div><strong>Extracted:</strong> Green Valley Clinic</div>
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
                     </div>
                 </div>
                 
@@ -2620,9 +1374,9 @@
             <h4>Validation Details</h4>
             <div class="validation-details">
                 <div class="detail-grid">
-                    <div><strong>Similarity Score:</strong> 1.000</div>
+                    <div><strong>Similarity Score:</strong> 0.553</div>
                     <div><strong>Polarity Match:</strong> ✓ Yes</div>
-                    <div><strong>Reference Polarity:</strong> positive</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
                     <div><strong>Candidate Polarity:</strong> neutral</div>
                 </div>
                 
@@ -2635,13 +1389,425 @@
 
                 <div class="text-section">
                     <h5>🔍 Query / Reference:</h5>
-                    <div class="text-content query-text">What is the next appointment for Sophia Lopez?</div>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
                 </div>
                 
 
                 <div class="text-section">
                     <h5>📝 Candidate Text:</h5>
-                    <div class="text-content candidate-text">This confirms your appointment with Dr. Garcia at Green Valley Clinic on October 10th at 2:30 PM.</div>
+                    <div class="text-content candidate-text">Auto coverage details: Policy POL-2024-001, insured amount $850.</div>
+                </div>
+                
+
+            </div>
+            
+</div></td></tr>
+<tr class="result-row">
+                <td class="candidate-id">9</td>
+                <td class="score-cell score-fail">0.275</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
+                </td>
+                <td class="facts-cell">3/3</td>
+                <td class="date-cell">22/12/2025 10:28</td>
+                <td class="actions-cell">
+                    <button onclick="toggleDetails('details_9')" class="btn-details" id="btn-details_9">View Details</button>
+                </td>
+            </tr>
+            <tr id="details_9" class="details-row" style="display: none;"><td colspan="6">
+        <div class="candidate-details">
+            <h4>Test Information</h4>
+            <div class="detail-grid">
+                <div><strong>Test Name:</strong> Candidate 9</div>
+                <div><strong>Test Category:</strong> LLM Validation</div>
+                <div><strong>Retention Score:</strong> 0.275</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195455</div>
+            </div>
+        
+
+            <div class="query-section">
+                <h4>🔍 Query / Question</h4>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
+            </div>
+            
+
+            <h4>Facts Analysis</h4>
+            <div class="facts-details">
+            
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">policy_number</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">amount</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">coverage_type</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <h4>Validation Details</h4>
+            <div class="validation-details">
+                <div class="detail-grid">
+                    <div><strong>Similarity Score:</strong> 0.275</div>
+                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                </div>
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
+            </div>
+            
+
+            <h4>Texts</h4>
+            <div class="conversation-texts">
+            
+
+                <div class="text-section">
+                    <h5>🔍 Query / Reference:</h5>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
+                </div>
+                
+
+                <div class="text-section">
+                    <h5>📝 Candidate Text:</h5>
+                    <div class="text-content candidate-text">Your vehicle is insured under policy POL-2024-001, which includes $850 of coverage.</div>
+                </div>
+                
+
+            </div>
+            
+</div></td></tr>
+<tr class="result-row">
+                <td class="candidate-id">10</td>
+                <td class="score-cell score-fail">0.374</td>
+                <td class="status-cell danger">
+                    ✗ FAIL
+                </td>
+                <td class="facts-cell">3/3</td>
+                <td class="date-cell">22/12/2025 10:28</td>
+                <td class="actions-cell">
+                    <button onclick="toggleDetails('details_10')" class="btn-details" id="btn-details_10">View Details</button>
+                </td>
+            </tr>
+            <tr id="details_10" class="details-row" style="display: none;"><td colspan="6">
+        <div class="candidate-details">
+            <h4>Test Information</h4>
+            <div class="detail-grid">
+                <div><strong>Test Name:</strong> Candidate 10</div>
+                <div><strong>Test Category:</strong> LLM Validation</div>
+                <div><strong>Retention Score:</strong> 0.374</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
+                <div><strong>All Retained:</strong> ✗ No</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195459</div>
+            </div>
+        
+
+            <div class="query-section">
+                <h4>🔍 Query / Question</h4>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
+            </div>
+            
+
+            <h4>Facts Analysis</h4>
+            <div class="facts-details">
+            
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">policy_number</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">amount</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">coverage_type</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <h4>Validation Details</h4>
+            <div class="validation-details">
+                <div class="detail-grid">
+                    <div><strong>Similarity Score:</strong> 0.374</div>
+                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                </div>
+                <div class="failure-reason"><strong>Failure Reason:</strong> Possible hallucination found in the candidate</div>
+            </div>
+            
+
+            <h4>Texts</h4>
+            <div class="conversation-texts">
+            
+
+                <div class="text-section">
+                    <h5>🔍 Query / Reference:</h5>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
+                </div>
+                
+
+                <div class="text-section">
+                    <h5>📝 Candidate Text:</h5>
+                    <div class="text-content candidate-text">I've verified that your auto policy POL-2024-001 offers $850 in benefits.</div>
+                </div>
+                
+
+            </div>
+            
+</div></td></tr>
+<tr class="result-row">
+                <td class="candidate-id">11</td>
+                <td class="score-cell score-poor">0.529</td>
+                <td class="status-cell success">
+                    ✓ PASS
+                </td>
+                <td class="facts-cell">3/3</td>
+                <td class="date-cell">22/12/2025 10:28</td>
+                <td class="actions-cell">
+                    <button onclick="toggleDetails('details_11')" class="btn-details" id="btn-details_11">View Details</button>
+                </td>
+            </tr>
+            <tr id="details_11" class="details-row" style="display: none;"><td colspan="6">
+        <div class="candidate-details">
+            <h4>Test Information</h4>
+            <div class="detail-grid">
+                <div><strong>Test Name:</strong> Candidate 11</div>
+                <div><strong>Test Category:</strong> LLM Validation</div>
+                <div><strong>Retention Score:</strong> 0.529</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
+                <div><strong>All Retained:</strong> ✓ Yes</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195576</div>
+            </div>
+        
+
+            <div class="query-section">
+                <h4>🔍 Query / Question</h4>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
+            </div>
+            
+
+            <h4>Facts Analysis</h4>
+            <div class="facts-details">
+            
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">policy_number</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">amount</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">coverage_type</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <h4>Validation Details</h4>
+            <div class="validation-details">
+                <div class="detail-grid">
+                    <div><strong>Similarity Score:</strong> 0.529</div>
+                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> neutral</div>
+                </div>
+                
+            </div>
+            
+
+            <h4>Texts</h4>
+            <div class="conversation-texts">
+            
+
+                <div class="text-section">
+                    <h5>🔍 Query / Reference:</h5>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
+                </div>
+                
+
+                <div class="text-section">
+                    <h5>📝 Candidate Text:</h5>
+                    <div class="text-content candidate-text">Everything is set—your auto insurance, policy POL-2024-001, protects you up to $850.</div>
+                </div>
+                
+
+            </div>
+            
+</div></td></tr>
+<tr class="result-row">
+                <td class="candidate-id">12</td>
+                <td class="score-cell score-poor">0.505</td>
+                <td class="status-cell success">
+                    ✓ PASS
+                </td>
+                <td class="facts-cell">3/3</td>
+                <td class="date-cell">22/12/2025 10:28</td>
+                <td class="actions-cell">
+                    <button onclick="toggleDetails('details_12')" class="btn-details" id="btn-details_12">View Details</button>
+                </td>
+            </tr>
+            <tr id="details_12" class="details-row" style="display: none;"><td colspan="6">
+        <div class="candidate-details">
+            <h4>Test Information</h4>
+            <div class="detail-grid">
+                <div><strong>Test Name:</strong> Candidate 12</div>
+                <div><strong>Test Category:</strong> LLM Validation</div>
+                <div><strong>Retention Score:</strong> 0.505</div>
+                <div><strong>Facts Retained:</strong> 3/3</div>
+                <div><strong>All Retained:</strong> ✓ Yes</div>
+                <div><strong>Timestamp:</strong> 2025-12-22T10:28:18.195580</div>
+            </div>
+        
+
+            <div class="query-section">
+                <h4>🔍 Query / Question</h4>
+                <div class="query-display">What is the cover for my auto policy POL-2024-001?</div>
+            </div>
+            
+
+            <h4>Facts Analysis</h4>
+            <div class="facts-details">
+            
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">policy_number</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> POL-2024-001</div>
+                        <div><strong>Extracted:</strong> POL-2024-001</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">amount</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> 850</div>
+                        <div><strong>Extracted:</strong> 850</div>
+                    </div>
+                </div>
+                
+
+                <div class="fact-detail">
+                    <div class="fact-header">
+                        <span class="fact-name">coverage_type</span>
+                        <span class="fact-status ✓">✓</span>
+                    </div>
+                    <div class="fact-info">
+                        <div><strong>Expected:</strong> auto insurance</div>
+                        <div><strong>Extracted:</strong> auto insurance</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <h4>Validation Details</h4>
+            <div class="validation-details">
+                <div class="detail-grid">
+                    <div><strong>Similarity Score:</strong> 0.505</div>
+                    <div><strong>Polarity Match:</strong> ✓ Yes</div>
+                    <div><strong>Reference Polarity:</strong> neutral</div>
+                    <div><strong>Candidate Polarity:</strong> positive</div>
+                </div>
+                
+            </div>
+            
+
+            <h4>Texts</h4>
+            <div class="conversation-texts">
+            
+
+                <div class="text-section">
+                    <h5>🔍 Query / Reference:</h5>
+                    <div class="text-content query-text">What is the cover for my auto policy POL-2024-001?</div>
+                </div>
+                
+
+                <div class="text-section">
+                    <h5>📝 Candidate Text:</h5>
+                    <div class="text-content candidate-text">Summary: Auto insurance policy POL-2024-001 with a coverage limit of $850 is active and in good standing.</div>
                 </div>
                 
 
@@ -2790,8 +1956,8 @@
         
         
         // Real data for charts
-        const temporalData = {"labels": ["12/22"], "scores": [88.9], "counts": [18], "similarity_scores": [95.2], "fact_retention_scores": [100.0]};
-        const comparisonData = {"current_period": 88.9, "previous_period": 0.0, "historical_average": 88.9, "target": 80};
+        const temporalData = {"labels": ["12/22"], "scores": [50.0], "counts": [12], "similarity_scores": [46.5], "fact_retention_scores": [100.0]};
+        const comparisonData = {"current_period": 79.2, "previous_period": 0.0, "historical_average": 79.2, "target": 80};
         
         // Gráfico de distribución de éxito
         const successRateCtx = document.getElementById('successRateChart').getContext('2d');
@@ -2800,7 +1966,7 @@
             data: {
                 labels: ['Passed', 'Failed'],
                 datasets: [{
-                    data: [16, 2],
+                    data: [6, 6],
                     backgroundColor: ['#28a745', '#dc3545'],
                     borderWidth: 2,
                     borderColor: '#fff'
