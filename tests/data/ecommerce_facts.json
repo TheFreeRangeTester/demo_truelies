@@ -1,0 +1,35 @@
+{
+    "facts": {
+        "product_name": {
+            "extractor": "categorical",
+            "expected": "Game Boy Color",
+            "patterns": {
+                "Game Boy Color": [
+                    "Game Boy Color",
+                    "GBC",
+                    "GameBoy Color",
+                    "Nintendo Game Boy Color",
+                    "game boy color"
+                ]
+            }
+        },
+        "price": {
+            "extractor": "money",
+            "expected": "100"
+        },
+        "shipping_days": {
+            "extractor": "categorical",
+            "expected": "10 business days",
+            "patterns": {
+                "10 business days": [
+                    "10",
+                    "10 days",
+                    "10 business days",
+                    "10 días hábiles",
+                    "ten business days",
+                    "10 días"
+                ]
+            }
+        }
+    }
+}

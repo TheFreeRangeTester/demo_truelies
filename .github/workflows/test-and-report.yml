@@ -76,6 +76,7 @@ jobs:
         run: |
           python tests/test_clinic.py
           python tests/test_chatbot.py
+          python tests/test_ecommerce.py
         continue-on-error: true
 
       - name: Verify history after tests
